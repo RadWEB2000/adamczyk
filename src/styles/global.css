@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "@toolwind/anchors";
+@plugin "@toolwind/corner-shape";
+@import "./_animations.css";
+@import "./_base.css";
+@import "./_breakpoints.css";
+@import "./_colors.css";
+@import "./_fonts.css";
+@import "./_gradients.css";
+@import "./_plugins.css";
+@import "./_reset.css";
+@import "./_typography.css";
+@import "./_utilities.css";
+@import "./_variants.css";
+

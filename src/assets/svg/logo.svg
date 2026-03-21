@@ -1,0 +1,24 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<path style="fill:#3E28C8;" d="M1538.119,1236.349L1070,966.081V425.543H930v540.538l-468.12,270.268l70,121.244L1000,1087.324
+				l468.119,270.269L1538.119,1236.349z M1000,1006.495L1000,1006.495L1000,1006.495L1000,1006.495z"/>
+			<rect x="992.5" y="425.543" style="fill:#FFFFFF;" width="15" height="580.953"/>
+			
+				<rect x="457.964" y="1144.233" transform="matrix(0.866 -0.5 0.5 0.866 -475.5983 528.5306)" style="fill:#FFFFFF;" width="580.952" height="15"/>
+			
+				<rect x="1244.06" y="861.257" transform="matrix(0.5 -0.866 0.866 0.5 -371.6503 1659.7489)" style="fill:#FFFFFF;" width="15" height="580.952"/>
+		</g>
+		<g>
+			<path style="fill:#000;" d="M461.881,763.651L930,1033.919v540.538h140v-540.538l468.12-270.268l-70-121.244L1000,912.675
+				L531.881,642.407L461.881,763.651z M1000,993.505L1000,993.505L1000,993.505L1000,993.505z"/>
+			<rect x="992.5" y="993.505" style="fill:#FFFFFF;" width="15" height="580.953"/>
+				<rect x="961.083" y="840.767" transform="matrix(0.866 -0.5 0.5 0.866 -256.4569 739.4351)" style="fill:#FFFFFF;" width="580.952" height="15"/>
+			
+				<rect x="740.94" y="557.791" transform="matrix(0.5 -0.866 0.866 0.5 -360.4006 1072.3015)" style="fill:#FFFFFF;" width="15" height="580.952"/>
+		</g>
+	</g>
+</g>
+</svg>

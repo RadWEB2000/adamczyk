@@ -1,0 +1,5 @@
+@theme {
+  --font-heading:var(--font-heading);
+  --font-ui:var(--font-ui);
+  --font-text:var(--font-text);
+}

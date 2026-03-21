@@ -20,6 +20,20 @@
       "recommended": true,
       "suspicious": {
         "noUnknownAtRules": "off"
+      },
+      "a11y":{
+        "noSvgWithoutTitle":"off",
+        "useHtmlLang":"error"
+      },
+      "performance":{
+        "noImgElement":"info"
+      },
+      "security":{
+        "noDangerouslySetInnerHtml":"off"
+      },
+      "style":{
+        "noHeadElement":"info",
+        "noExportedImports":"info"
       }
     },
     "domains": {
@@ -30,7 +44,9 @@
   "assist": {
     "actions": {
       "source": {
-        "organizeImports": "on"
+        "organizeImports": "on",
+        "useSortedAttributes":"on",
+        "useSortedProperties":"on"
       }
     }
   }

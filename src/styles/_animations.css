@@ -1,0 +1,36 @@
+@layer base {
+    @keyframes navigation-scroll {
+        from {
+            background-color: transparent;
+        }
+        to {
+            /* background-color:var(--color-secondary-300); */
+        }
+    }
+
+    .navigation-scroll-animation {
+        animation:  navigation-scroll linear forwards;
+        animation-range: 30vh 45vh;
+        animation-timeline: scroll();
+        will-change: background-color;
+    }
+
+    @keyframes marquee {
+ from {
+    transform: translate3d(0,0,0);
+  }
+  to {
+    transform: translate3d(-100%,0,0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: marquee linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+}

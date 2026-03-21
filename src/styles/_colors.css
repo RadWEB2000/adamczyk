@@ -1,0 +1,86 @@
+@theme inline {
+/* 
+  --color-grayscale-100:#f6f8fa;
+  --color-grayscale-250:#e1e6eb;
+  --color-grayscale-300:#cac8c8;
+  --color-grayscale-400:#989998;
+  --color-grayscale-500:#4a4f4b;
+  --color-grayscale-600:#333848;
+  --color-grayscale-750:#20232d;
+  --color-grayscale-800:#1B1D26;
+  --color-grayscale-900:#16171E;
+  --color-grayscale-1000:#0b0b0f; */
+/* 
+  --color-primary-100:#e81350;
+  --color-primary-200:#c50031;
+  --color-primary-300:#e51549;
+  --color-primary-400:#ea134c;
+  --color-primary-700:#ad0532;
+  --color-primary-900:#6e021f; */
+  
+
+
+--color-grayscale-0: #ffffffff;
+--color-grayscale-25: #fdfdfdff;
+--color-grayscale-50: #fcfcfcff;
+--color-grayscale-75: #fbfbfbff;
+--color-grayscale-100: #ffffffff;
+--color-grayscale-125: #fcfcfcff;
+--color-grayscale-150: #fafafaff;
+--color-grayscale-175: #f8f8f9ff;
+--color-grayscale-200: #f6f6f6ff;
+--color-grayscale-225: #f5f5f6ff;
+--color-grayscale-250: #f4f4f5ff;
+--color-grayscale-275: #f3f3f4ff;
+--color-grayscale-300: #f3f3f5ff;
+--color-grayscale-325: #f0f0f2ff;
+--color-grayscale-350: #ededf0ff;
+--color-grayscale-375: #e8e7ebff;
+--color-grayscale-400: #e2e1e4ff;
+--color-grayscale-425: #dedde1ff;
+--color-grayscale-450: #dad9ddff;
+--color-grayscale-475: #d6d5d9ff;
+--color-grayscale-500: #e0e0e0ff;
+--color-grayscale-525: #d2d2d4ff;
+--color-grayscale-550: #c6c6c8ff;
+--color-grayscale-575: #b5b5b8ff;
+--color-grayscale-600: #868687ff;
+--color-grayscale-625: #7a7a7cff;
+--color-grayscale-650: #6f6f71ff;
+--color-grayscale-675: #5e5e61ff;
+--color-grayscale-700: #2c2b2dff;
+--color-grayscale-725: #28272aff;
+--color-grayscale-750: #242326ff;
+--color-grayscale-775: #1f1e21ff;
+--color-grayscale-800: #191b1dff;
+--color-grayscale-825: #17181bff;
+--color-grayscale-850: #141518ff;
+--color-grayscale-875: #101114ff;
+--color-grayscale-900: #0b0b0fff;
+--color-grayscale-925: #08080bff;
+--color-grayscale-950: #050507ff;
+--color-grayscale-975: #020203ff;
+--color-grayscale-1000: #000000ff;
+
+--color-primary-100: #6C5CE7;
+--color-primary-200: #5768ff;
+--color-primary-300:#3543c1;
+--color-primary-400:#3e28c8;
+--color-primary-500: #2F1FA3;
+--color-primary-600:#181363;
+--color-primary-700:#0C0D43;
+--color-primary-800:#000623;
+--color-primary-900:#030719;
+--color-primary-1000:#06080E;
+
+--color-secondary: #f7714c;
+--color-tertiary: #EFFE01;
+
+  /* === NEUTRAL === */
+
+  /* === FEEDBACK === */
+  --color-success: oklch(76.458% 0.24836 141.337);
+  --color-error: oklch(57.26% 0.2275 27.713);
+}
+
+                                                    
