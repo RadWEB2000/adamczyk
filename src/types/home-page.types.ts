@@ -24,8 +24,12 @@ export type T_About = {
     }>
 }
 
+export type T_Overview = {
+    content:string;
+}
 
 export interface I_HomePage_Static {
     hero:T_Hero;
     about:T_About;
+    overview:string;
 }

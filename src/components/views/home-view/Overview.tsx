@@ -1,11 +1,11 @@
-export default function Overview(){
+import type { T_Overview } from "@/ts/home-page.types";
+
+export default function Overview({content}:T_Overview){
     return (
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, eos quae itaque culpa magni architecto voluptas eum eligendi vel alias praesentium cum consequatur nihil repellat perspiciatis quasi harum natus veritatis?
-            Suscipit ullam eius in laudantium laboriosam quisquam, nulla rem, non sapiente dolor, et nam magnam eveniet maxime nobis tempore qui iusto cum? Dicta aut blanditiis exercitationem cum asperiores repellat velit.
-            Fugiat inventore quos deserunt laboriosam, exercitationem esse odio, blanditiis repellat, laborum necessitatibus ipsum commodi asperiores. Nostrum aliquam possimus voluptates minus quos reiciendis culpa, eligendi laudantium, illum animi placeat architecto suscipit.
-            Officiis consectetur ad eos ipsam excepturi maxime totam ducimus odio illo inventore dolorem obcaecati sapiente est, quod doloremque quo voluptate necessitatibus quisquam blanditiis aspernatur. Natus deserunt dolore obcaecati atque fugit!
-            Voluptatem iusto aut a, nemo et facere maxime animi sunt impedit quae voluptates. Nulla voluptates ad repellendus natus odio nam laborum perferendis. Sunt nemo aspernatur molestias in blanditiis eveniet molestiae!
+        <p
+            className="w-[min(1700px,85%)] mx-auto 2xl5:w-[min(1900px,85%)] text-4xl-plus font-extrabold leading-tight text-balance mt-20 mb-15 md:text-7xl 2xl:text-9xl 2xl5:text-10xl block text-neutral-400"
+        >
+            {content}
         </p>
     )
 }

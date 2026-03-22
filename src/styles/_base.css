@@ -14,8 +14,8 @@ body {
 
 
 ::selection {
-  background-color: var(--color-primary-100);
-  color:var(--color-grayscale-1000);
+  background-color: var(--color-black);
+  color:var(--color-gray-100);
 }
 
 .field-search {

@@ -59,4 +59,5 @@ export const homePageStatic:I_HomePage_Static =  {
         subtitle:`Specjalista SEO, który łączy marketing z programowaniem`,
         title:`Radosław Adamczyk – specjalista SEO i AI SEO`
     },
+    overview:`Ucieknij od konwencji w copywritingu i postaw na teksty, które naprawdę przyciągają klientów. Sprawdź ile mogą zdziałać słowa!`
 }
