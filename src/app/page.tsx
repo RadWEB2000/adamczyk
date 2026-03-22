@@ -5,7 +5,9 @@ export default function HomePage(){
   const {hero} = data;
 
   return (
-    <div>
+    <div
+      className=""
+    >
       <Hero
         {...hero}
       />
