@@ -1,8 +1,8 @@
 import { homePageStatic as data} from "@/static/home-page"
-import { Hero } from "@/views/home-view"
+import { About, Hero, Overview } from "@/views/home-view"
 export default function HomePage(){
 
-  const {hero} = data;
+  const {hero, about} = data;
 
   return (
     <div
@@ -11,7 +11,14 @@ export default function HomePage(){
       <Hero
         {...hero}
       />
-    
+      <main
+        className="space-y-8"
+      >
+        <Overview/>
+        <About
+          {...about}
+        />  
+      </main>    
     </div>
   )
 }

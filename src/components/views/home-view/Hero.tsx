@@ -51,7 +51,7 @@ export default function Hero({content,image,subtitle,title,buttons}:T_Hero){
                 className="z-1 col-start-1 col-end-13 absolute bottom-0 right-0 w-full h-full  landscape:max-md5:col-start-8  flex items-end  md2:col-start-1  md5:col-start-6 xl1:col-start-7 2xl:col-start-8"
             >
                    <Image
-                        className="rotate-y-180 grayscale object-cover object-[95%] contrast-[1.1] brightness-95  mask-alpha mask-r-to-neutral-900 mask-l-from-20 h-screen  md2:object-right  "
+                        className="rotate-y-180 grayscale object-cover object-[95%] better-img mask-alpha mask-r-to-neutral-900 mask-l-from-20 h-screen  md2:object-right  "
                         height={image.height || 1020}
                         loading="eager"
                         priority

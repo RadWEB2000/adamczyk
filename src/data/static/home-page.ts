@@ -1,5 +1,6 @@
 import type { I_HomePage_Static } from "@/ts/home-page.types";
 import me_lumo from "@/img/me/r-adamczyk-lumo.webp"
+import me_krk from "@/img/me/krak-2.webp"
 
 export const homePageStatic:I_HomePage_Static =  {
     hero : {
@@ -23,6 +24,39 @@ export const homePageStatic:I_HomePage_Static =  {
                 href : "/case-studies"
             }
         ],
-     
-    }
+    },
+    about:{
+        image:{
+            alt:'Radosław Adamczyk - specjalista SEO i AI SEO',
+            src:me_krk.src,
+            title:'Specjalista SEO Poznań, Śrem, Kościan',
+            height:me_krk.height,
+            width:me_krk.width
+        },
+        button:{
+            label:'Poznajmy się!',
+            href:'/o-mnie'
+        },
+        content:`<span>Nazywam się Radosław Adamczyk i zajmuję się pozycjonowaniem stron internetowych oraz optymalizacją widoczności w wyszukiwarkach. Pomagam firmom zdobywać klientów z internetu poprzez strategie SEO, content marketing i automatyzację działań marketingowych.</span> <br/><span>Specjalizuję się w SEO oraz optymalizacji pod wyszukiwarki oparte o sztuczną inteligencję (AI Search). Dzięki połączeniu marketingu, analityki i programowania tworzę strategie, które nie tylko zwiększają widoczność w Google, ale przede wszystkim generują realny ruch i zapytania od klientów.</span>`,
+        list:[
+            {
+                emoji:'🔎',
+                title:'SEO'
+            },
+            {
+                emoji:'🤖',
+                title:'AI SEO'
+            },
+            {
+                emoji:'⚙',
+                title:'Automatyzacje'
+            },
+            {
+                emoji:'💻',
+                title:'Strony interentowe'
+            },
+        ],
+        subtitle:`Specjalista SEO, który łączy marketing z programowaniem`,
+        title:`Radosław Adamczyk – specjalista SEO i AI SEO`
+    },
 }
