@@ -1,4 +1,5 @@
 export {default as About} from "@/views/home-view/About"
+export {default as CaseStudies} from "@/views/home-view/CaseStudies"
 export {default as Hero} from "@/views/home-view/Hero"
 export {default as Overview} from "@/views/home-view/Overview"
 export {default as Services} from "@/views/home-view/Services"

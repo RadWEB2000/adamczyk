@@ -34,10 +34,7 @@ export default function Services(){
             </div>
             <span className="block w-full h-0.5 bg-neutral-400 page-section-width mx-auto rounded-full my-4" />
             <List/>
-            <span className="block w-full h-0.5 bg-neutral-400 page-section-width mx-auto rounded-full my-4" />
-            <div className="w-[min(1850px,85%)] 2xl5:w-[min(2050px,85%)] min-h-156 bg-blue-700 mx-auto">
-                a
-            </div>
+           
         </div>
     )
 }

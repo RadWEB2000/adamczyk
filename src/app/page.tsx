@@ -1,4 +1,4 @@
-import { About, Hero, Overview, Services, Statistics } from "@/views/home-view";
+import { About, CaseStudies, Hero, Overview, Services, Statistics } from "@/views/home-view";
 
 export default function HomePage(){
 
@@ -17,6 +17,7 @@ export default function HomePage(){
           <Services/>
           <Statistics/>
         </div>
+        <CaseStudies/>
         <section className="py-30 h-270">
 a
         </section>

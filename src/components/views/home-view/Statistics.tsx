@@ -27,7 +27,7 @@ export default function Statistics(){
 
     return (
         <div
-            className="w-screen min-h-[80vh] relative grid grid-cols-1 grid-rows-1 *:col-start-1 *:row-start-1 z-0 mt-0"
+            className="w-screen min-h-[40vh] relative grid grid-cols-1 grid-rows-1 *:col-start-1 *:row-start-1 z-0 mt-0"
         >
             <Image
                 alt=""
@@ -38,7 +38,7 @@ export default function Statistics(){
                 src={img.src}
                 width={img.width || 1920}
             />
-            <div
+            {/* <div
                 className="p-21 inset-0  flex flex-col flex-wrap  gap-12 justify-between"
             >
                 <h2
@@ -52,7 +52,7 @@ export default function Statistics(){
                     <Tile/>
                     <Tile/>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
