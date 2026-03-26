@@ -1,89 +1,127 @@
 @theme inline {
   
-  /* TOKENS */
-  /* TOKENS === NEUTRAL */
-  --color-neutral-0:   oklab(100% 0 -0.00011);
-  --color-neutral-50:  oklab(97.9% -0.0003 -0.003);
-  --color-neutral-100: oklab(96.3% -0.0005 -0.006);
-  --color-neutral-200: oklab(92.7% -0.0005 -0.006);
-  --color-neutral-300: oklab(85%   -0.001  -0.01);
-  --color-neutral-400: oklab(72.7% -0.0018 -0.0186);
-  --color-neutral-500: oklab(55.1% -0.0023 -0.0233);
-  --color-neutral-600: oklab(40%   -0.0025 -0.028);
-  --color-neutral-700: oklab(21%   -0.003  -0.032);
-  --color-neutral-800: oklab(16.9% -0.001  -0.022);
-  --color-neutral-900: oklab(12.8% -0.0037 -0.040);
-  --color-neutral-950: oklab(8%    -0.004  -0.045);
-  /* TOKENS === TANGERLINE */
-  --color-tangerline-300: oklab(70.04% 0.14702 0.13407);
-  --color-tangerline-200: oklab(75.14999999999999% 0.11061 0.11639);
-  --color-tangerline-100: oklab(70.04% 0.14702 0.13407 / 0.102);
+  /* ===== TOKENS – NEUTRAL ===== */
+  --color-neutral-0:    oklab(100% 0 0);           /* biały */
+  --color-neutral-50:   oklab(98.5% -0.001 -0.002); /* off-white */
+  --color-neutral-100:  oklab(96% -0.002 -0.004);   /* jasnoszary */
+  --color-neutral-200:  oklab(92% -0.003 -0.006);   /* delikatny szary */
+  --color-neutral-300:  oklab(85% -0.004 -0.008);   /* średnio-jasny szary */
+  --color-neutral-400:  oklab(72% -0.005 -0.01);    /* szary */
+  --color-neutral-500:  oklab(55% -0.006 -0.012);   /* ciemniejszy szary */
+  --color-neutral-600:  oklab(40% -0.007 -0.014);   /* grafit */
+  --color-neutral-700:  oklab(28% -0.008 -0.016);   /* ciemny grafit */
+  --color-neutral-800:  oklab(18% -0.009 -0.018);   /* prawie czarny */
+  --color-neutral-900:  oklab(10% -0.01 -0.02);     /* czarny z odcieniem */
+  --color-neutral-950:  oklab(5% -0.011 -0.022);    /* głęboka czerń */
 
-  /* LIGHT */
-  /* LIGHT === SURFACE */
-  --color-surface-light: var(--color-neutral-0);
-  --color-surface-alt-light: var(--color-neutral-50);
-  --color-surface-subtle-light: var(--color-neutral-100);
-  --color-surface-muted-light: var(--color-neutral-200);
-  /* LIGHT === TEXT */
-  --color-content-light: var(--color-neutral-900);
-  --color-content-muted-light: var(--color-neutral-500);
-  --color-content-subtle-light: var(--color-neutral-400);
-  /* LIGHT === BORDER */
-  --color-border-light: color-mix(in oklab, var(--color-neutral-900) 8%, transparent);
-  /* LIGHT === ELEVATION */
-  --color-surface-elevated-light: var(--color-neutral-0);
+  /* ===== TOKENS – BRAND (granat) ===== */
+  --color-brand-50:     oklab(95% -0.008 -0.02);    /* bardzo jasny granat */
+  --color-brand-100:    oklab(88% -0.012 -0.035);
+  --color-brand-200:    oklab(76% -0.018 -0.052);
+  --color-brand-300:    oklab(64% -0.024 -0.069);
+  --color-brand-400:    oklab(52% -0.03 -0.086);
+  --color-brand-500:    oklab(40% -0.036 -0.103);   /* główny granat */
+  --color-brand-600:    oklab(34% -0.032 -0.09);
+  --color-brand-700:    oklab(28% -0.028 -0.077);
+  --color-brand-800:    oklab(22% -0.024 -0.064);
+  --color-brand-900:    oklab(16% -0.02 -0.051);
+  --color-brand-950:    oklab(10% -0.016 -0.038);
 
+  /* ===== TOKENS – ACCENT (pomarańcz) ===== */
+  --color-accent-50:    oklab(96% 0.025 0.03);
+  --color-accent-100:   oklab(92% 0.045 0.055);
+  --color-accent-200:   oklab(84% 0.08 0.095);
+  --color-accent-300:   oklab(76% 0.115 0.135);
+  --color-accent-400:   oklab(68% 0.15 0.175);
+  --color-accent-500:   oklab(60% 0.185 0.215);    /* główny pomarańcz */
+  --color-accent-600:   oklab(54% 0.165 0.19);
+  --color-accent-700:   oklab(48% 0.145 0.165);
+  --color-accent-800:   oklab(42% 0.125 0.14);
+  --color-accent-900:   oklab(36% 0.105 0.115);
+  --color-accent-950:   oklab(30% 0.085 0.09);
 
-  /* DARK */
-  /* DARK === SURFACE */
-  --color-surface-dark: var(--color-neutral-800);
-  --color-surface-alt-dark: var(--color-neutral-900);
-  --color-surface-subtle-dark: var(--color-neutral-700);
-  --color-surface-muted-dark: var(--color-neutral-600);  
-  /* DARK === TEXT */
-  --color-content-dark: var(--color-neutral-0);
-  --color-content-muted-dark: color-mix(in oklab, var(--color-neutral-0) 70%, transparent);
-  --color-content-subtle-dark: color-mix(in oklab, var(--color-neutral-0) 50%, transparent);
-  /* DARK === BORDER */
-  --color-border-dark: color-mix(in oklab, var(--color-neutral-0) 12%, transparent);
-  /* DARK === ELEVATION */
-  --color-surface-elevated-light: var(--color-neutral-700);
+  /* ===== TOKENS – FEEDBACK ===== */
+  --color-success:      oklab(75% -0.12 0.18);     /* zielony */
+  --color-success-muted: oklab(85% -0.08 0.12);
+  --color-error:        oklab(62% 0.18 0.12);      /* czerwony */
+  --color-error-muted:  oklab(75% 0.12 0.08);
+  --color-warning:      oklab(80% 0.05 0.2);       /* żółty/amber */
+  --color-info:         oklab(70% -0.05 -0.15);    /* błękitny */
 
-  /* BRAND */
-  --color-brand: var(--color-tangerline-300);
-  --color-brand-hover: var(--color-tangerline-200);
-  --color-brand-soft: var(--color-tangerline-100);
-
-  /* DARK-LIGHT */
-  /* DARK-LIGHT === SURFACE */
-  --color-surface: light-dark(var(--color-surface-light), var(--color-surface-dark));
-  --color-surface-alt: light-dark(var(--color-surface-alt-light), var(--color-surface-alt-dark));
-  --color-surface-subtle: light-dark(var(--color-surface-subtle-light), var(--color-surface-subtle-dark));
-  --color-surface-muted: light-dark(var(--color-surface-muted-light), var(--color-surface-muted-dark));
-  /* DARK-LIGHT === TEXT */
-  --color-content: light-dark(var(--color-content-light), var(--color-content-dark));
-  --color-content-muted: light-dark(var(--color-content-muted-light), var(--color-content-muted-dark));
-  --color-content-subtle: light-dark(var(--color-content-subtle-light), var(--color-content-subtle-dark));
-  /* DARK-LIGHT === BORDER */
-  --color-border: light-dark(var(--color-border-light), var(--color-border-dark));
-  /* DARK-LIGHT === ELEVATION */
-  --color-surface-elevated-light: light-dark(var(--color-elevated-light),var(--color-elevated-dark));
-
-
-
-
-
-
-
-
-
-
-  /* === NEUTRAL === */
-
-  /* === FEEDBACK === */
-  --color-success: oklch(76.458% 0.24836 141.337);
-  --color-error: oklch(57.26% 0.2275 27.713);
+  /* ===== SEMANTIC – LIGHT MODE ===== */
+  /* SURFACE (tła) */
+  --color-surface:              var(--color-neutral-0);
+  --color-surface-alt:          var(--color-neutral-50);
+  --color-surface-subtle:       var(--color-neutral-100);
+  --color-surface-muted:        var(--color-neutral-200);
+  --color-surface-inverse:      var(--color-brand-600);
+  
+  /* TEXT */
+  --color-content:              var(--color-neutral-800);
+  --color-content-muted:        var(--color-neutral-500);
+  --color-content-subtle:       var(--color-neutral-400);
+  --color-content-inverse:      var(--color-neutral-0);
+  
+  /* BORDER */
+  --color-border:               color-mix(in oklab, var(--color-neutral-800) 8%, transparent);
+  --color-border-strong:        color-mix(in oklab, var(--color-neutral-800) 20%, transparent);
+  
+  /* BRAND & ACCENT */
+  --color-brand:                var(--color-brand-500);
+  --color-brand-hover:          var(--color-brand-600);
+  --color-brand-soft:           var(--color-brand-50);
+  
+  --color-accent:               var(--color-accent-500);
+  --color-accent-hover:         var(--color-accent-600);
+  --color-accent-soft:          var(--color-accent-50);
+  
+  /* ===== SEMANTIC – DARK MODE ===== */
+  /* SURFACE (tła) */
+  --color-surface-dark:              var(--color-neutral-900);
+  --color-surface-alt-dark:          var(--color-neutral-800);
+  --color-surface-subtle-dark:       var(--color-neutral-700);
+  --color-surface-muted-dark:        var(--color-neutral-600);
+  --color-surface-inverse-dark:      var(--color-accent-500);
+  
+  /* TEXT */
+  --color-content-dark:              var(--color-neutral-100);
+  --color-content-muted-dark:        color-mix(in oklab, var(--color-neutral-100) 70%, transparent);
+  --color-content-subtle-dark:       color-mix(in oklab, var(--color-neutral-100) 50%, transparent);
+  --color-content-inverse-dark:      var(--color-neutral-900);
+  
+  /* BORDER */
+  --color-border-dark:               color-mix(in oklab, var(--color-neutral-100) 12%, transparent);
+  --color-border-strong-dark:        color-mix(in oklab, var(--color-neutral-100) 25%, transparent);
+  
+  /* BRAND & ACCENT (dark mode – nieco jaśniejsze) */
+  --color-brand-dark:                var(--color-brand-400);
+  --color-brand-hover-dark:          var(--color-brand-300);
+  --color-brand-soft-dark:           var(--color-brand-900);
+  
+  --color-accent-dark:               var(--color-accent-400);
+  --color-accent-hover-dark:         var(--color-accent-300);
+  --color-accent-soft-dark:          var(--color-accent-900);
+  
+  /* ===== AUTO (light-dark) ===== */
+  --color-surface:            light-dark(var(--color-surface-light), var(--color-surface-dark));
+  --color-surface-alt:        light-dark(var(--color-surface-alt-light), var(--color-surface-alt-dark));
+  --color-surface-subtle:     light-dark(var(--color-surface-subtle-light), var(--color-surface-subtle-dark));
+  --color-surface-muted:      light-dark(var(--color-surface-muted-light), var(--color-surface-muted-dark));
+  --color-surface-inverse:    light-dark(var(--color-surface-inverse-light), var(--color-surface-inverse-dark));
+  
+  --color-content:            light-dark(var(--color-content-light), var(--color-content-dark));
+  --color-content-muted:      light-dark(var(--color-content-muted-light), var(--color-content-muted-dark));
+  --color-content-subtle:     light-dark(var(--color-content-subtle-light), var(--color-content-subtle-dark));
+  --color-content-inverse:    light-dark(var(--color-content-inverse-light), var(--color-content-inverse-dark));
+  
+  --color-border:             light-dark(var(--color-border-light), var(--color-border-dark));
+  --color-border-strong:      light-dark(var(--color-border-strong-light), var(--color-border-strong-dark));
+  
+  --color-brand:              light-dark(var(--color-brand-light), var(--color-brand-dark));
+  --color-brand-hover:        light-dark(var(--color-brand-hover-light), var(--color-brand-hover-dark));
+  --color-brand-soft:         light-dark(var(--color-brand-soft-light), var(--color-brand-soft-dark));
+  
+  --color-accent:             light-dark(var(--color-accent-light), var(--color-accent-dark));
+  --color-accent-hover:       light-dark(var(--color-accent-hover-light), var(--color-accent-hover-dark));
+  --color-accent-soft:        light-dark(var(--color-accent-soft-light), var(--color-accent-soft-dark));
 }
-
-                                                    

@@ -104,3 +104,35 @@
     animation-timeline: scroll();
   }
 
+@utility transition-default {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+@utility transition-smooth {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  transition-duration: 400ms;
+}
+
+
+@utility sticky-top {
+  position: sticky;
+  top: 0;
+}
+
+@utility sticky-top-offset {
+  position: sticky;
+  top: var(--sticky-offset, 5rem);
+}
+
+
+@utility debug {
+  outline: 1px solid red;
+}
+
+@utility debug-grid {
+  background-image: linear-gradient(to right, rgba(255,0,0,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}

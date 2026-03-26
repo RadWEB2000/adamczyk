@@ -1,17 +1,45 @@
-import { Oswald, Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
+import local from "next/font/local";
+import {Plus_Jakarta_Sans, Geist_Mono} from "next/font/google"
 
-const oswald = Oswald({
-  subsets:['latin','latin-ext'],
+const clashDisplay = local({
+  src:'./clash-display.woff2',
+  variable:'--font-clash-display',
+  weight:'500 600 700 900',
   display:'swap',
   preload:true,
-  variable:'--font-heading'
+  fallback:['sans-serif']
 })
 
-const grotesk = Plus_Jakarta_Sans({
-  subsets:['latin','latin-ext'],
+const clashGrotesk = local({
+  src:'./clash-grotesk.woff2',
+  variable:'--font-clash-grotesk',
+  weight:'400 500 600 700',
   display:'swap',
-  variable:'--font-text'
+  preload:true,
+  fallback:['sans-serif']
 })
 
+const satoshi = local({
+  src:'./satoshi.woff2',
+  variable:'--font-satoshi',
+  weight:'400 600 700',
+  display:'swap',
+  preload:true,
+  fallback:['sans-serif']
+})
 
-export {oswald, grotesk}
+const jakarta = Plus_Jakarta_Sans({
+  variable: '--font-plus-jakarta',
+  display: 'swap',
+  preload: true,
+  fallback: ['sans-serif'],
+});
+
+const geist = Geist_Mono({
+  variable: '--font-geist-mono',
+  display: 'swap',
+  preload: true,
+  fallback: ['monospace'],
+});
+
+export {clashDisplay,clashGrotesk,jakarta,geist,satoshi}

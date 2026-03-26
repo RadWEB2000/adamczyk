@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/css/global.css";
-import { grotesk, oswald } from "@/fonts/main";
+import { clashDisplay, clashGrotesk, geist, jakarta, satoshi } from "@/fonts/main";
 
 
 export const metadata: Metadata = {
@@ -14,9 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl-PL">
       <body
-        className={`${oswald.variable} ${grotesk.variable} antialiased bg-secondary`}
+        className={`${clashDisplay.variable} ${clashGrotesk.variable} ${jakarta.variable} ${satoshi.variable} ${geist.variable} antialiased `}
       >
         {children}
       </body>

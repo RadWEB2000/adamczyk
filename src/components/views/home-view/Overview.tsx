@@ -1,11 +1,17 @@
-import type { T_Overview } from "@/ts/home-page.types";
+import { homePageStatic } from "@/static/home-page"
 
-export default function Overview({content}:T_Overview){
+export default function Overview(){
+
+    const content = homePageStatic.overview
+
     return (
-        <p
-            className="w-[min(1700px,85%)] mx-auto 2xl5:w-[min(1900px,85%)] text-4xl-plus font-extrabold leading-tight text-balance mt-20 mb-15 md:text-7xl 2xl:text-9xl 2xl5:text-10xl block text-neutral-400"
+        <section
+            className="page-section-width mx-auto mt-30"
         >
-            {content}
-        </p>
+            <p
+                className="text-xl font-bold uppercase scroll-reveal sm3:text-3xl-plus text-balance md5:text-6xl xl2:text-8xl 2xl:text-8xl-plus 2xl5:text-10xl"
+                dangerouslySetInnerHTML={{__html:content}}
+            />
+        </section>
     )
 }

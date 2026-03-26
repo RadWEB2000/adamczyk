@@ -1,65 +1,57 @@
-import { PatternLines, PatternShapes } from "@/assets/svgr";
-import type { T_Hero } from "@/ts/home-page.types";
+import { PrimaryLinkButton as Button } from "@/utils/buttons";
+import { homePageStatic } from "@/data/static/home-page"
 import Image from "next/image";
-import Link from "next/link";
 
-export default function Hero({content,image,subtitle,title,buttons}:T_Hero){
-    return (
-        <header className="bg-neutral-950 grid grid-cols-12 mb-3 *:row-start-1 min-h-[92vh] text-content-dark relative md5:min-h-[96vh] z-0"
-       
-        >
-            <PatternLines
-                className="absolute bottom-0 right-0 w-full rotate-y-180 -z-1 opacity-25"
-            />
-            <div
-                className="z-2 col-start-1 col-end-13 flex flex-col items-start justify-end px-[6vw] pb-[9vh] space-y-5 landscape:max-md5:col-end-10 md2:px-0  md2:pl-[5vw]  md2:col-end-11 md5:col-end-10  2xl:space-y-8"
+export default function Hero(){
+    const {content,image,subtitle,title,buttons} = homePageStatic.hero;
+
+    return(
+         <header className="bg-brand-950 min-h-[97vh] bg-[linear-gradient(to_right,color-mix(in_srgb,var(--color-brand-200),transparent_86%)_1px,transparent_1px)] bg-size-[105px_150px]  text-neutral-200 grid grid-cols-1 *:row-start-1 z-0 relative landscape:sm4:max-md2:grid-cols-5 md:grid-cols-12 2xl5:min-h-[92vh]">
+            <section
+                className="col-start-1  bg-orange-500/0 z-1 flex flex-col items-start justify-end pb-10 px-9 space-y-5 landscape:sm4:max-md2:col-end-5 landscape:sm4:max-md2:space-y-2 md:col-end-10 md:pr-0 md:pl-13 md:pb-15  2xl:pl-52.5  2xl:pb-[10vh]  2xl:space-y-8"
             >
                 <hgroup
-                    className="headings space-y-2 2xl:space-y-4"
+                    className="headings space-y-2 *:font-heading"
                 >
-                    <h1 className="text-primary-100 font-bold text-2xl-plus  landscape:max-md:text-lg  landscape:max-md5:text-2xl  md2:text-3xl-plus 2xl:text-4xl-plus 2xl5:text-6xl-plus" >
-                        {title}
-                    </h1>
+                    <h1
+                        className="text-lg font-semibold landscape:sm4:max-md2:text-base md:text-2xl-plus 2xl:text-4xl-plus  2xl5:text-6xl-plus"
+                    >{title}</h1>
                     <h2
-                        className="text-secondary text-5xl-plus font-black text-tangerline-300 landscape:max-md:text-3xl-plus landscape:max-md5:text-5xl  md2:text-6xl-plus xl1:text-8xl-plus 2xl:text-9xl-plus 2xl5:text-11xl"
-                    >
-                        {subtitle}
-                    </h2>
+                        className=" font-black text-4xl uppercase text-accent-500 landscape:sm4:max-md2:text-3xl md:text-6xl lg:text-7xl-plus 2xl:text-9xl  2xl5:text-10xl-plus"
+                    >{subtitle}</h2>
                 </hgroup>
                 <p
-                    className="text-base text-content-muted-dark text-balance max-w-[60ch] leading-tight  landscape:max-md5:text-sm  md2:text-lg xl1:text-xl  xl1:leading-snug 2xl:text-xl-plus 2xl5:text-3xl  2xl5:leading-relaxed"
+                    className="text-sm leading-relaxed landscape:sm4:max-md2:text-xs md:text-base  lg:text-lg max-w-[65ch]  2xl5:text-2xl-plus"
                     dangerouslySetInnerHTML={{__html:content}}
                 />
-                {
-                    buttons &&
-                    <div
-                        className="flex flex-row flex-wrap gap-1.5 *:shrink-0"
-                    >
-                        {
-                            buttons.map(({label,href}) => {
-                                return (
-                                    <Link href={href} key={`${label}-${href}`} >
-                                        {label}
-                                    </Link>
-                                )
-                            })
-                        }
-                    </div>
-                }
-            </div>
+                <div className="flex flex-row flex-wrap gap-1 md:gap-3  2xl5:gap-6">
+                    {
+                        buttons?.map(({href,label}) => {
+                            return (
+                                <Button
+                                    href={href}
+                                    key={`hero-button-${label}-${href}`}
+                                    label={label}
+                                    theme="light"
+                                />
+                            )
+                        })
+                    }
+                </div>
+            </section>
             <div
-                className="z-1 col-start-1 col-end-13 absolute bottom-0 right-0 w-full h-full  landscape:max-md5:col-start-8  flex items-end  md2:col-start-1  md5:col-start-6 xl1:col-start-7 2xl:col-start-8"
+                   className="col-start-1 bg-pink-500/0 relative -z-1 landscape:sm4:max-md2:col-start-4 landscape:sm4:max-md2:col-end-6 md:col-start-6 md:col-end-13 lg:col-start-8"
             >
-                   <Image
-                        className="rotate-y-180 grayscale object-cover object-[95%] better-img mask-alpha mask-r-to-neutral-900 mask-l-from-20 h-screen  md2:object-right  "
-                        height={image.height || 1020}
-                        loading="eager"
-                        priority
-                        quality={75}
-                        width={image.width || 1920}
-                        {...image}
-                    />
+                <Image
+                    className="h-screen absolute bottom-0 right-0 object-cover rotate-y-180 grayscale object-[115%] mask-r-from-0% mask-r-to-80%  better-img md:object-[70%]  lg:mask-r-from-45%  lg:mask-r-to-90%  2xl:mask-r-from-55%  2xl:mask-r-to-100%"
+                    {...image}
+                    height={image.height || 1026}
+                    loading="eager"
+                    priority
+                    quality={65}
+                    width={image.width || 768}
+                />
             </div>
-        </header>
+         </header>
     )
 }
