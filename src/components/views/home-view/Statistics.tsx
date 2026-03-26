@@ -27,7 +27,7 @@ export default function Statistics(){
 
     return (
         <div
-            className="w-screen min-h-[80vh] relative grid grid-cols-1 grid-rows-1 *:col-start-1 *:row-start-1 z-0"
+            className="w-screen min-h-[80vh] relative grid grid-cols-1 grid-rows-1 *:col-start-1 *:row-start-1 z-0 mt-0"
         >
             <Image
                 alt=""

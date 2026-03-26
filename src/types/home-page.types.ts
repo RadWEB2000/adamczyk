@@ -32,4 +32,7 @@ export interface I_HomePage_Static {
     hero:T_Hero;
     about:T_About;
     overview:string;
+    offer:{
+        
+    }
 }

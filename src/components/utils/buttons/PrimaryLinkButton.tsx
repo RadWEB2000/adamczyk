@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function PrimaryLinkButton({href,label,lang,styles,theme,...props}:T_PrimaryLinkButton){
     return ( 
     <Link
-        className={`group relative inline-block cursor-pointer px-0.5 text-sm font-bold uppercase transition-all duration-150 ease-in-out focus:outline-none active:scale-97 `}
+        className={`group relative inline-block cursor-pointer px-0.5 text-sm font-bold uppercase transition-all duration-150 ease-in-out focus:outline-none active:scale-97 select-none `}
         href={href}
         hrefLang={lang}
         {...props}

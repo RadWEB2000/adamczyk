@@ -22,7 +22,7 @@ export default function About(){
             >
                 <hgroup className="headings space-y-2 ">
                     <h2
-                    className="text-lg font-semibold landscape:sm4:max-md2:text-base sm3:text-xl-plus 2xl:text-4xl-plus  2xl5:text-6xl-plus"
+                    className="text-lg font-semibold landscape:sm4:max-md2:text-base sm3:text-xl-plus 2xl:text-4xl-plus  2xl5:text-6xl"
                         >{title}</h2>
                     <h3
                         className=" font-black text-3xl uppercase text-accent-500 landscape:sm4:max-md2:text-3xl sm3:text-4xl-plus lg:text-5xl-plus 2xl:text-7xl  2xl5:text-8xl-plus"

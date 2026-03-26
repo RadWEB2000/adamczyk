@@ -13,8 +13,10 @@ export default function HomePage(){
       >
         <Overview/>
         <About/>
-        <Services/>
-        <Statistics/>
+        <div>
+          <Services/>
+          <Statistics/>
+        </div>
         <section className="py-30 h-270">
 a
         </section>

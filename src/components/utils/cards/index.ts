@@ -1,0 +1,1 @@
+export {default as HomeServiceCard} from "@/cards/HomeServiceCard"

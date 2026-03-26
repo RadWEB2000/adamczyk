@@ -1,2 +1,5 @@
+export {default as CoreStar} from "@/svgr/CoreStar"
+export {default as FlowStar} from "@/svgr/FlowStar"
 export {default as PatternLines} from "@/svgr/PatternLines"
 export {default as PatternShapes} from "@/svgr/PatternShapes"
+export {default as SignalStar} from "@/svgr/SignalStar"

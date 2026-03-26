@@ -1,10 +1,10 @@
-import { T_SecondaryLinkButton } from "@/types/buttons.types";
 import Link from "next/link";
+import type { T_SecondaryLinkButton } from "@/ts/buttons.types";
 
 export default function SecondaryLinkButton({href,label,lang,styles,theme,...props}:T_SecondaryLinkButton){
     return (
         <Link
-            className="w-fit flex items-center flex-nowrap gap-1 sm:gap-2 relative after:content-[''] after:absolute  after:-bottom-1  after:left-0  after:w-full  after:h-0.5  after:block after:bg-neutral-100  data-[theme='dark']:after:bg-neutral-950  after:scale-x-0  after:origin-left hocus:after:scale-x-100  after:transition-transform  after:duration-400  after:ease-in-out group"
+            className={`w-fit flex items-center flex-nowrap gap-1 sm:gap-2 relative after:content-[''] after:absolute  after:-bottom-1  after:left-0  after:w-full  after:h-0.5  after:block after:bg-neutral-100  data-[theme='dark']:after:bg-neutral-950  after:scale-x-0  after:origin-left hocus:after:scale-x-100  after:transition-transform  after:duration-400  after:ease-in-out group select-none ${styles}`}
             data-theme={theme}
             href={href}
             hrefLang={lang}
