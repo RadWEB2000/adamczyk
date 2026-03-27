@@ -5,7 +5,7 @@ import Link from "next/link"
 function Case(){
     return (
         <Link
-            className="w-full"
+            className="w-fullgi"
             href='#'
         >
             <div
