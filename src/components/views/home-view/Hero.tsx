@@ -14,17 +14,17 @@ export default function Hero(){
                     className="headings space-y-2 *:font-heading"
                 >
                     <h1
-                        className="text-lg font-semibold landscape:sm4:max-md2:text-base md:text-2xl-plus 2xl:text-4xl-plus  2xl5:text-6xl-plus"
+                        className="text-lg font-semibold landscape:sm4:max-md2:text-base md:text-2xl-plus xl5:text-3xl-plus 2xl:text-4xl-plus  2xl5:text-6xl-plus"
                     >{title}</h1>
                     <h2
-                        className=" font-black text-4xl uppercase text-accent-500 landscape:sm4:max-md2:text-3xl md:text-6xl lg:text-7xl-plus 2xl:text-9xl  2xl5:text-10xl-plus"
+                        className=" font-black text-4xl uppercase text-accent-500 landscape:sm4:max-md2:text-3xl md:text-6xl lg:text-7xl-plus xl5:text-8xl-plus 2xl:text-9xl  2xl5:text-10xl-plus"
                     >{subtitle}</h2>
                 </hgroup>
                 <p
-                    className="text-sm leading-relaxed landscape:sm4:max-md2:text-xs md:text-base  lg:text-lg max-w-[65ch]  2xl5:text-2xl-plus"
+                    className="text-sm leading-relaxed landscape:sm4:max-md2:text-xs md:text-base  lg:text-lg xl5:text-xl-plus max-w-[65ch]  2xl5:text-2xl-plus"
                     dangerouslySetInnerHTML={{__html:content}}
                 />
-                <div className="flex flex-row flex-wrap gap-1 md:gap-3  2xl5:gap-6">
+                <div className="flex flex-row flex-wrap gap-1 md:gap-3 xl5:mt-4 2xl5:gap-6">
                     {
                         buttons?.map(({href,label}) => {
                             return (
@@ -43,7 +43,7 @@ export default function Hero(){
                    className="col-start-1 bg-pink-500/0 relative -z-1 landscape:sm4:max-md2:col-start-4 landscape:sm4:max-md2:col-end-6 md:col-start-6 md:col-end-13 lg:col-start-8"
             >
                 <Image
-                    className="h-screen absolute bottom-0 right-0 object-cover rotate-y-180 grayscale object-[115%] mask-r-from-0% mask-r-to-80%  better-img md:object-[70%]  lg:mask-r-from-45%  lg:mask-r-to-90%  2xl:mask-r-from-55%  2xl:mask-r-to-100%"
+                    className="h-screen absolute bottom-0 right-0 object-cover rotate-y-180 grayscale object-[115%] mask-r-from-0% mask-r-to-80%  better-img md:object-[70%]  lg:mask-r-from-45%  lg:mask-r-to-90%  xl5:mask-r-from-55%  xl5:mask-r-to-100%"
                     {...image}
                     height={image.height || 1026}
                     loading="eager"

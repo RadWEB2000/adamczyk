@@ -18,28 +18,28 @@ export default function About(){
                 width={image.width || 768}
             />
             <section
-                className="space-y-4 lg:p-3"
+                className="page-section"
             >
-                <hgroup className="headings space-y-2 ">
+                <hgroup className="page-section__headings">
                     <h2
-                    className="text-lg font-semibold landscape:sm4:max-md2:text-base sm3:text-xl-plus 2xl:text-4xl-plus  2xl5:text-6xl"
+                    className="page-section__title"
                         >{title}</h2>
                     <h3
-                        className=" font-black text-3xl uppercase text-accent-500 landscape:sm4:max-md2:text-3xl sm3:text-4xl-plus lg:text-5xl-plus 2xl:text-7xl  2xl5:text-8xl-plus"
+                        className="page-section__subtitle text-accent-500"
                     >{subtitle}</h3>
                 </hgroup>
                 <p
-                    className="*:block text-xs leading-relaxed *:text-balance landscape:sm4:max-md2:text-xs sm:text-sm  sm3:text-base  lg:text-lg max-w-[65ch]  2xl5:text-2xl-plus"
+                    className="page-section__content text-neutral-700 "
                     dangerouslySetInnerHTML={{__html:content}}
                 />
                 {
                     list &&
-                    <ul className="flex flex-row flex-wrap space-x-4 space-y-1.5">
+                    <ul className="flex flex-row flex-wrap space-x-4 space-y-1.5 xl5:mt-4">
                         {
                             list.map(({emoji,title}) => {
                                 return (
                                     <li
-                                        className="inline-flex gap-1 text-sm font-bold font-ui uppercase sm3:text-lg "
+                                        className="inline-flex gap-1 text-sm font-bold font-ui uppercase sm3:text-lg xl5:text-xl"
                                         key={`list-${emoji}-${title}`}
                                     >
                                         <i className="not-italic" >{emoji}</i>

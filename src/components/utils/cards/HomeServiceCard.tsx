@@ -9,7 +9,7 @@ function Tile(){
                 className="text-base uppercase font-bold text-brand-100  sm:text-lg-plus  2xl:text-xl-plus  2xl5:text-3xl"
             >Strategia słów kluczowych</h3>
             <p
-                className="mb-3 text-xs text-neutral-300 text-balance  sm:text-sm  2xl:text-base  2xl5:text-lg"
+                className="mb-3 text-xs text-neutral-300 text-balance  sm:text-sm  xl4:text-base  2xl5:text-lg"
             >
                 Analiza branży i konkurencji w celu identyfikacji najskuteczniejszych słów kluczowych
             </p>
@@ -31,13 +31,13 @@ export default function HomeServiceCard(){
             >
                 <hgroup className="headings *:font-heading">
                     <h3
-                        className="text-lg font-bold sm:text-xl-plus  2xl:text-2xl 2xl5:text-4xl-plus"
+                        className="text-lg font-bold sm:text-xl-plus  xl4:text-2xl 2xl5:text-4xl-plus"
                     >SEO i Optymlizacja treści</h3>
                     <h4
-                        className="text-3xl-plus font-extrabold text-accent-300  sm:text-5xl  2xl:text-6xl  2xl5:text-7xl-plus"
+                        className="text-3xl-plus font-extrabold text-accent-300  sm:text-5xl  xl4:text-6xl  2xl5:text-7xl-plus"
                     >Pozycjonowanie stron internetowych</h4>
                 </hgroup>
-                <p className="text-sm text-balance max-w-[60ch]  2xl:text-base  2xl5:text-lg">
+                <p className="text-sm text-balance max-w-[60ch]  xl4:text-lg">
                     Optymalizacja treści to podstawowy element skutecznego marketingu internetowego. Nawet najlepszy tekst bez właściwej optymalizacji może pozostać niewidoczny dla potencjalnych klientów. Dlatego oferujemy kompleksowe usługi SEO copywritingu, aby Twoja treść przyciągała ruch i generowała zyski.
                 </p>
                 <SecondaryButton

@@ -1,7 +1,7 @@
 html {
   scroll-timeline-name: --page-scroll;
   scroll-timeline-axis: block;
-
+  scrollbar-width: stable;
 }
 
 body {
@@ -102,7 +102,7 @@ body {
   @apply *:leading-[1.1] *:uppercase *:text-balance;
 }
 
-.better-img {
+img {
   @apply contrast-[1.1] brightness-95;
 }
 

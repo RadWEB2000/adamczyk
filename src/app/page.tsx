@@ -1,11 +1,12 @@
-import { About, CaseStudies, Hero, Overview, Services, Statistics } from "@/views/home-view";
+import { Faq } from "@/utils/ui";
+import { About, Blog, CaseStudies, Hero, Overview, Services, Statistics, Testimonials } from "@/views/home-view";
 
 export default function HomePage(){
 
 
   return (
     <div
-      className=""
+      className="pb-25"
     >
       <Hero/>
       <main
@@ -18,9 +19,11 @@ export default function HomePage(){
           <Statistics/>
         </div>
         <CaseStudies/>
-        <section className="py-30 h-270">
-a
-        </section>
+        <div>
+          <Blog/>
+          <Testimonials/>
+        </div>
+        <Faq/>
       </main>    
     </div>
   )
