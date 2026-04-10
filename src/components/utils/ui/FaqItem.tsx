@@ -12,14 +12,16 @@ export default function FaqItem() {
             className="border-b-2 border-brand-400 h-fit"
         >
             <div
-                className="grid grid-cols-[auto_1.8rem] items-center px-3 py-3 bg-[color-mix(in_srgb,var(--color-brand-50),var(--color-neutral-100))]"
+                className="grid grid-cols-[auto_1.3rem] lg:grid-cols-[auto_1.8rem] items-center px-3 py-3 bg-[color-mix(in_srgb,var(--color-brand-50),var(--color-neutral-100))]"
             >
+                <label htmlFor="faq-title">
                 <h2
                     className="font-heading upppercase uppercase font-extrabold text-base leading-none md4:text-2xl"
                 >Jakie są korzyści z korzystania z Twoich usług?</h2>
-                <button className="w-fit -rotate-90 mr-0 ml-auto data-[expand=true]:rotate-0 transition-transform duration-300 ease-in-out" onClick={() => toggleIsOpen(!isOpen)} type="button" data-expand={isOpen}>
+                </label>
+                <button className="w-fit -rotate-90 mr-0 ml-auto data-[expand=true]:rotate-0 transition-transform duration-300 ease-in-out" onClick={() => toggleIsOpen(!isOpen)} type="button" data-expand={isOpen} id="faq-title" >
                     <Arrow
-                        className="size-7"
+                        className="size-4 lg:size-7"
                     />
                 </button>
             </div>

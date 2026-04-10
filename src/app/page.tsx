@@ -23,7 +23,9 @@ export default function HomePage(){
           <Blog/>
           <Testimonials/>
         </div>
-        <Faq/>
+        <div className="page-section-width mx-auto">
+          <Faq/>
+        </div>
       </main>    
     </div>
   )

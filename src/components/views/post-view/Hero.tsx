@@ -2,10 +2,11 @@ import Image from "next/image";
 import img from "@/img/others/farm.jpg"
 import { Breadcrumbs } from "@/utils/ui";
 import { CalendarIcon, ClockIcon } from "@/assets/svgr";
+
 export default function Hero(){
     return (
         <header
-            className="bg-brand-950 min-h-[64vh] bg-[linear-gradient(to_right,color-mix(in_srgb,var(--color-brand-200),transparent_86%)_1px,transparent_1px)] bg-size-[105px_150px]  text-neutral-200 mb-14"
+            className="bg-brand-950 min-h-[64vh] bg-[linear-gradient(to_right,color-mix(in_srgb,var(--color-brand-200),transparent_86%)_1px,transparent_1px)] bg-size-[105px_150px]  text-neutral-200 mb-17"
         >
             <section
                 className="page-section-width mx-auto flex flex-col pt-32"

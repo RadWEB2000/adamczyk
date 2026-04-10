@@ -17,14 +17,14 @@ export default function RegularBlogCard(){
             />
             <section>
                 <h3
-                    className="font-heading text-2xl leading-tight text-balance font-bold uppercase group-hocus:text-accent-500"
+                    className="font-heading text-lg lg:text-2xl leading-tight text-balance font-bold uppercase group-hocus:text-accent-500"
                 >How to choose the right manufacturing partner for your business</h3>
                 <p
                  className="line-clamp-3 text-neutral-500 text-sm mt-1"
                 >Prowizje na Allegro rosną, Amazon walczy o polskich sprzedawców, a Google coraz częściej odpowiada na pytania klientów, zanim ci klikną w jakikolwiek link. Czy w takim otoczeniu budowanie własnego sklepu i inwestycja w SEO wciąż mają sens? Dane z ostatnich miesięcy dają dość jednoznaczną odpowiedź – tak, choć pod pewnymi warunkami.</p>
             </section>
             <div
-                className="flex flex-row items-end justify-between gap-2 "
+                className="flex flex-row flex-wrap items-end justify-between gap-2 "
             >
                 <p
                     className="inline-flex items-center gap-2"
@@ -32,7 +32,7 @@ export default function RegularBlogCard(){
                     <Calendar
                         className="size-3"
                     />
-                    <time className="text-sm font-semibold uppercase" dateTime="2023-10-10">10 paź 2023</time>
+                    <time className="text-xs font-semibold uppercase xl2:text-sm" dateTime="2023-10-10">10 paź 2023</time>
                 </p>
                 <p
                     className="inline-flex items-center gap-2"
@@ -40,7 +40,7 @@ export default function RegularBlogCard(){
                     <User
                         className="size-3 "
                     />
-                    <span className="text-sm font-semibold uppercase">Radosław Adamczyk</span>
+                    <span className="text-xs font-semibold uppercase xl2:text-sm">Radosław Adamczyk</span>
                 </p>
             </div>
         </Link>

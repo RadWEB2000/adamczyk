@@ -24,7 +24,7 @@ const simple_data = {
 export default function HomeCaseStudyCard(){
    const {img,title,content,href,services,goals, release} = simple_data;
     return (
-        <Link className="flex flex-col md5:grid grid-cols-[4fr_2fr] w-[min(55rem,75vw)] group gap-3" href="#">
+        <Link className="flex flex-col md5:grid grid-cols-[4fr_2fr] w-[min(55rem,75vw)] group gap-3" href="/case-studies/agencja-zatrudnienia-tymczasowego">
             {
                 img &&
                 <div
