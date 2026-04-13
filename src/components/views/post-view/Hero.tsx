@@ -11,7 +11,18 @@ export default function Hero(){
             <section
                 className="page-section-width mx-auto flex flex-col pt-32"
             >
-            <Breadcrumbs/>
+            <Breadcrumbs
+                items={[
+                    {
+                        href:'/blog',
+                        label:'Blog'
+                    },
+                    {
+                        href:'/blog/marketplace-vs-wlasny-sklep–czy-w-2026-roku-oplaca-sie-jeszcze-walczyc-o-ruch-seo',
+                        label:'Marketplace vs własny sklep – czy w 2026 roku opłaca się jeszcze walczyć o ruch SEO?'
+                    }
+                ]}
+            />
             <h1 className="mt-8 mb-3 font-black font-heading leading-none text-accent-500 uppercase text-3xl sm:text-4xl-plus md:text-6xl lg:text-7xl-plus xl4:text-9xl-plus 2xl5:text-10xl-plus">Marketplace vs własny sklep – czy w 2026 roku opłaca się jeszcze walczyć o ruch SEO?</h1>
             <strong
                 className="text-sm sm:text-base leading-relaxed max-w-[85ch] text-balance"

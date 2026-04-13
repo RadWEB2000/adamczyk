@@ -25,7 +25,7 @@ export default function Services(){
                         dangerouslySetInnerHTML={{__html:`<span>Widoczność w internecie stała się jednym z najważniejszych wyznaczników sukcesu dla firm. Agencje SEO i SEM odgrywają w tym obszarze fundamentalną rolę. Pomagają przedsiębiorcom wspinać się coraz wyżej w wynikach wyszukiwania Google, a tym samym zwiększać świadomość marki wśród przedstawicieli konkretnej grupy docelowej i przyciągać nowych klientów.</span><br/><span>Poniżej odpowiadamy na najczęściej pojawiające się pytania w kontekście tego rodzaju agencji. Wyjaśniamy różnice pomiędzy SEM i SEO, omawiamy zakres usług, a także podpowiadamy, jak rozpocząć kariery w tych dynamicznie rozwijających się branżach. Sprawdzamy również, jakich kosztów muszą się spodziewać firmy chcące wypromować swój biznes w internecie.</span>`}}
                     />
                     <PrimaryLinkButton
-                        href="#"
+                        href="/oferta"
                         label="Oferta freelancera"
                         styles="w-fit"
                         theme="light"

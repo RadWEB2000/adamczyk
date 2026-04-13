@@ -9,7 +9,14 @@ export default function Hero(){
             <section
                 className="pb-5 lg5:pb-15"
             >
-                <Breadcrumbs/>
+                <Breadcrumbs
+                    items={[
+                        {
+                            href:'/case-studies',
+                            label:'Case Studies'
+                        }
+                    ]}
+                />
                 <hgroup
                     className="headings space-y-2 *:font-heading mt-10"
                 >
