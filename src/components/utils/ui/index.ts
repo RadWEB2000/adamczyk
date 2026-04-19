@@ -1,4 +1,5 @@
 export {default as Breadcrumbs} from "@/utils/ui/Breadcrumbs"
+export {default as ContactForm} from "@/utils/ui/ContactForm"
 export {default as Faq} from "@/utils/ui/Faq"
 export {default as FaqItem} from "@/utils/ui/FaqItem"
 export {default as FilterTerms} from "@/utils/ui/FilterTerms"

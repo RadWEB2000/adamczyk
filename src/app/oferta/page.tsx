@@ -1,4 +1,4 @@
-import { Services, Steps } from "@/views/offer-view";
+import { CaseStudies, CitiesSection, IndustriesSection, PartnershipBenefits, Services, Steps } from "@/views/offer-view";
 import { RegularHero as Hero} from "@/utils/ui";
 import business from "@/img/me/adamczyk-planowanie-marynarka.webp"
 import Image from "next/image";
@@ -181,6 +181,8 @@ export default function OfferPage(){
                 content="Pomagam firmom zdobywać widoczność w Google i systemach AI, budować topical authority oraz projektować szybkie strony internetowe zoptymalizowane pod SEO, odpowiedzi generatywne i konwersję. Łączę strategię contentową, architekturę informacji i nowoczesny web development, aby każdy element serwisu pracował na wzrost ruchu oraz leadów."
             />
             <main className="space-y-4 my-5">
+                            <IndustriesSection/>
+              
                 <div className="page-section-width mx-auto">
                     <Image
                         alt=""
@@ -191,7 +193,11 @@ export default function OfferPage(){
                     />
                     <Services/>
                 </div>
-                <Steps/>
+                <div>
+                  <PartnershipBenefits/>
+                  <Steps/>
+                  <CaseStudies/>
+                </div>
                 <div className="page-section-width mx-auto mt-15 mb-10 xl:grid xl:grid-cols-[360px_1fr] gap-3">
                     <aside
                         className="bg-neutral-200/50 px-3 py-2 "
@@ -204,6 +210,7 @@ export default function OfferPage(){
                     />
                 </div>
                 <Testimonials/>
+                <CitiesSection/>
                 <div className="page-section-width mx-auto mt-7 mb-3">
                     <Faq/>
                 </div>

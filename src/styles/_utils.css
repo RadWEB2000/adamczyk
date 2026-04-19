@@ -12,6 +12,6 @@
         @apply font-black text-3xl uppercase  landscape:sm4:max-md2:text-3xl sm3:text-4xl-plus xl5:text-7xl-plus lg:text-5xl-plus 2xl:text-7xl  2xl5:text-8xl-plus;
     }
     .page-section__content {
-        @apply *:block text-xs leading-relaxed *:text-balance landscape:sm4:max-md2:text-xs sm:text-sm  sm3:text-base xl5:text-lg-plus lg:text-lg max-w-[65ch]  2xl5:text-2xl-plus *:not-first:my-3.5;
+        @apply *:block text-xs leading-relaxed *:text-balance landscape:sm4:max-md2:text-xs sm:text-sm  sm3:text-base xl5:text-lg-plus lg:text-lg max-w-[65ch]  2xl5:text-2xl-plus *:not-first:my-3.5 text-balance;
     }
 }

@@ -1,2 +1,7 @@
+export {default as CaseStudies} from "@/views/offer-view/CaseStudies"
+export {default as CitiesSection} from "@/views/offer-view/CitiesSection"
+export {default as PartnershipBenefits} from "@/views/offer-view/PartnershipBenefits"
+export {default as PartnershipBenefitsTiles} from "@/views/offer-view/PartnershipBenefitsTiles"
 export {default as Services} from "@/views/offer-view/Services"
+export {default as IndustriesSection} from "@/views/offer-view/IndustriesSection"
 export {default as Steps} from "@/views/offer-view/Steps"
