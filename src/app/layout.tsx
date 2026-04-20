@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/css/global.css";
 import { clashDisplay, clashGrotesk, geist, jakarta, satoshi } from "@/fonts/main";
+import { Navigation } from "@/components/layout/navigation";
+import NavigationProvider from "@/provider/NavigationProvider";
 
 
 export const metadata: Metadata = {
@@ -18,7 +20,10 @@ export default function RootLayout({
       <body
         className={`${clashDisplay.variable} ${clashGrotesk.variable} ${jakarta.variable} ${satoshi.variable} ${geist.variable} antialiased `}
       >
-        {children}
+        <NavigationProvider>
+          <Navigation/>
+          {children}
+        </NavigationProvider>
       </body>
     </html>
   );
