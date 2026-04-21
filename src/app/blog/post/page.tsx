@@ -180,7 +180,6 @@ export default function PostPage(){
                 </div>
                 <RecommendedArticles/>
             </main>
-            post
         </div>
     )
 }

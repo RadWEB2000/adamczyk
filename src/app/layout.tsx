@@ -3,6 +3,7 @@ import "@/css/global.css";
 import { clashDisplay, clashGrotesk, geist, jakarta, satoshi } from "@/fonts/main";
 import { Navigation } from "@/components/layout/navigation";
 import NavigationProvider from "@/provider/NavigationProvider";
+import { Footer } from "@/layout/footer";
 
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         <NavigationProvider>
           <Navigation/>
           {children}
+          <Footer/>
         </NavigationProvider>
       </body>
     </html>
