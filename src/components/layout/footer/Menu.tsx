@@ -214,24 +214,24 @@ const menu:t_menu = [
 export default function Menu(){
     return (
         <menu
-                className="grid grid-cols-2 page-section-width mx-auto gap-4 my-6"
+                className="grid grid-cols-1 sm3:grid-cols-2 auto-rows-fr page-section-width mx-auto gap-4 my-6 lg4:grid-cols-3"
             >
                 {
                     menu.map(({title,items}) => {
                         return (
                             <div>
                                 <h4
-                                    className="text-xl-plus font-heading uppercase font-extrabold"
+                                    className="text-xl font-heading uppercase font-extrabold"
                                 >{title}</h4>
                                 <span className="w-full h-px block my-3  bg-brand-400" />
                                 <ul
-                                    className="flex flex-col"
+                                    className="flex flex-col gap-1.5"
                                 >
                                     {
                                         items.map(({href,label}) => {
                                             return (
                                                 <Link
-                                                    className="block uppercase text-neutral-400 transition-colors duration-200 ease-linear hocus:text-neutral-50"
+                                                    className="block uppercase text-sm text-neutral-400 transition-colors duration-200 ease-linear hocus:text-neutral-50"
                                                     href={href}
                                                     hrefLang="pl-PL"
                                                     key={`footer-menu-item-${href}-${label}`}

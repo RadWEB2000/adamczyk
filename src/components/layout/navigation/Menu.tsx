@@ -99,7 +99,7 @@ function Dropdown({dropdown,href,label}:dropdown){
             onMouseLeave={() => toggleIsOpenDropdown(false)}
         >
             <div
-                className="gap-x-3 h-10 inline-flex items-center "
+                className="gap-x-3 xl3:h-10 inline-flex items-center "
 
             >
                 <Item
