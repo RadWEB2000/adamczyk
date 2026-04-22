@@ -1,6 +1,6 @@
 import { RegularHero } from "@/components/utils/ui";
 import { RegularBlogCard as Card } from "@/utils/cards";
-import { ControlPanel, Hero } from "@/views/blog-view";
+import { ControlPanel } from "@/views/blog-view";
 
 export default function BlogPage(){
     return (

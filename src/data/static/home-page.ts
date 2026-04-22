@@ -1,8 +1,7 @@
-import type { I_HomePage_Static } from "@/ts/home-page.types";
 import me_lumo from "@/img/me/r-adamczyk-lumo.webp"
 import me_krk from "@/img/me/krak-2.webp"
 
-export const homePageStatic:I_HomePage_Static =  {
+export const homePageStatic =  {
     hero : {
         image: {
             alt: "Radosław Adamczyk – specjalista SEO i developer",

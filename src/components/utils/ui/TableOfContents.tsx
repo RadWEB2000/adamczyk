@@ -105,7 +105,6 @@ export default function TableOfContents(){
                         return (
                             <Link
                                 className="inline-flex gap-2  items-center text-xs-plus text-balance uppercase text-neutral-500 before:content-[''] before:size-1.5 before:bg-black duration-200 transition-colors ease-in-out  before:duration-200  before:transition-colors  before:ease-in-out hocus:text-accent-400  hocus:before:bg-accent-400"
-                                data-level={level}
                                 href={href}
                                 key={`toc-item-${level}-${title}-${href}`}
                             >

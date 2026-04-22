@@ -19,21 +19,29 @@
     "rules": {
       "recommended": true,
       "suspicious": {
-        "noUnknownAtRules": "off"
+        "noUnknownAtRules": "off",
+        "noCommentText":"warn",
+        "noConsole":"warn",
+        "noDuplicateObjectKeys":"warn",
+        "noDuplicateProperties":"warn"
       },
       "a11y":{
-        "noSvgWithoutTitle":"off",
-        "useHtmlLang":"error"
+        "noSvgWithoutTitle":"on",
+        "useHtmlLang":"error",
+        "useAltText":"warn"
       },
       "performance":{
         "noImgElement":"info"
       },
       "security":{
-        "noDangerouslySetInnerHtml":"off"
+        "noDangerouslySetInnerHtml":"off",
+        "noBlankTarget":"off",
+        "noDangerouslySetInnerHtmlWithChildren":"off"
       },
       "style":{
-        "noHeadElement":"info",
-        "noExportedImports":"info"
+        "noHeadElement":"warn",
+        "noExportedImports":"warn",
+        "noYodaExpression":"warn"
       }
     },
     "domains": {

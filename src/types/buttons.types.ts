@@ -15,3 +15,8 @@ export type T_SecondaryLinkButton =  T_LinkButtonBase & {
     theme: 'dark' | 'light'
 }
 
+export type T_ButtonBase = {
+    label:string;
+    href:string;
+    lang?:string;
+}
