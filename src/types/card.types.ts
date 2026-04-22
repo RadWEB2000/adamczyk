@@ -63,6 +63,5 @@ export type T_RegularCaseStudyCard = {
 }
 
 export type T_RegularCityCard = {
-    city:string;
     image:T_ImageBase;
 } & T_ButtonBase

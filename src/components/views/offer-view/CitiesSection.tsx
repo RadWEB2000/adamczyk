@@ -17,7 +17,7 @@ export default function CitiesSection(){
                 className="marquee-mask flex items-center flex-row flex-nowrap justify-start overflow-x-clip gap-1"
             >
                 <City
-                    city="Warszawa"
+                    label="Warszawa"
                     href="/oferta/warszawa"
                     image={{
                         alt:'Warszawa - Oferta SEO / SEM', 
@@ -28,7 +28,19 @@ export default function CitiesSection(){
                     }}
                 />
                 <City
-                    city="Warszawa"
+                    label="Warszawa"
+                    href="/oferta/warszawa"
+                    
+                    image={{
+                        alt:'Warszawa - Oferta SEO / SEM', 
+                        src:city.src,
+                        title:'Warszawa - Usługi SEO',
+                        height:512,
+                        width:512
+                    }}
+                />
+                <City
+                    label="Warszawa"
                     href="/oferta/warszawa"
                     image={{
                         alt:'Warszawa - Oferta SEO / SEM', 
@@ -39,7 +51,7 @@ export default function CitiesSection(){
                     }}
                 />
                 <City
-                    city="Warszawa"
+                    label="Warszawa"
                     href="/oferta/warszawa"
                     image={{
                         alt:'Warszawa - Oferta SEO / SEM', 
@@ -50,7 +62,7 @@ export default function CitiesSection(){
                     }}
                 />
                 <City
-                    city="Warszawa"
+                    label="Warszawa"
                     href="/oferta/warszawa"
                     image={{
                         alt:'Warszawa - Oferta SEO / SEM', 
@@ -61,7 +73,7 @@ export default function CitiesSection(){
                     }}
                 />
                 <City
-                    city="Warszawa"
+                    label="Warszawa"
                     href="/oferta/warszawa"
                     image={{
                         alt:'Warszawa - Oferta SEO / SEM', 
@@ -72,7 +84,7 @@ export default function CitiesSection(){
                     }}
                 />
                 <City
-                    city="Warszawa"
+                    label="Warszawa"
                     href="/oferta/warszawa"
                     image={{
                         alt:'Warszawa - Oferta SEO / SEM', 
@@ -83,18 +95,7 @@ export default function CitiesSection(){
                     }}
                 />
                 <City
-                    city="Warszawa"
-                    href="/oferta/warszawa"
-                    image={{
-                        alt:'Warszawa - Oferta SEO / SEM', 
-                        src:city.src,
-                        title:'Warszawa - Usługi SEO',
-                        height:512,
-                        width:512
-                    }}
-                />
-                <City
-                    city="Warszawa"
+                    label="Warszawa"
                     href="/oferta/warszawa"
                     image={{
                         alt:'Warszawa - Oferta SEO / SEM', 

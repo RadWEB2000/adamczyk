@@ -2,7 +2,7 @@ import type { T_RegularCityCard } from "@/ts/card.types";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RegularCityCard({city,href,image,...props}:T_RegularCityCard){
+export default function RegularCityCard({label,href,image,...props}:T_RegularCityCard){
     return (
         <Link
             className="w-54 md3:w-62 xl4:w-76 shrink-0 group space-y-3 *:duration-100 *:ease-in-out *:transition-all active:scale-95 duration-100 ease-in-out transition-transform" 
@@ -19,7 +19,7 @@ export default function RegularCityCard({city,href,image,...props}:T_RegularCity
             />
             <h4
                 className="font-heading uppercase font-bold text-lg group-hocus:text-accent-400 text-center"
-            >{city}</h4>
+            >{label}</h4>
         </Link>
     )
 }
