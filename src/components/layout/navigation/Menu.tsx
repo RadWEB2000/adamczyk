@@ -1,7 +1,8 @@
 'use client'
 import { ArrowIcon } from "@/assets/svgr";
+import NavigationContext from "@/context/NavigationContext";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 type item = {
     label:string;
@@ -73,11 +74,13 @@ const menu:t_menu = [
 
 
 function Item({href,label,level}:item){
+    const {closeExpandMenu} = useContext(NavigationContext);
     return (
         <Link
             className="uppercase font-ui data-[level=main]:text-xl-plus  data-[level=main]:font-bold  data-[level=main]:text-neutral-200 hocus:data-[level=main]:text-accent-300 data-[level=submenu]:text-base leading-none hocus:data-[level=submenu]:text-accent-200 sm:data-[level=main]:text-2xl-plus sm:data-[level=submenu]:text-xl lg:data-[level=main]:text-base lg:data-[level=submenu]:text-sm lg:data-[level=main]:h-10 flex items-center justify-start w-fit " 
             data-level={level}
             href={href}
+            onClick={closeExpandMenu}
         >
             {label}
         </Link>

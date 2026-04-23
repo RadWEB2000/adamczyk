@@ -4,7 +4,6 @@ import Image from "next/image"
 export default function About(){
     return (
         <div className="page-section-width mx-auto xl2:grid max-xl2:space-y-6 gap-10 items-center grid-cols-[550px_1fr]">
-            {/* <div className="relative aspect-3.5/4 size-full max-xl4:max-h-120"> */}
             <Image
                 alt=""
                 className=" max-xl2:max-h-120 object-cover w-full object-top max-w-137.5"
@@ -12,7 +11,6 @@ export default function About(){
                 src={img.src}
                 width={img.width || 1024}
             />
-            {/* </div> */}
             <section
                 className="page-section"
             >

@@ -1,4 +1,4 @@
-import { EmailIcon, FacebookIcon, GithubIcon, InstagramIcon, LinkedInIcon, LocationIcon, MediumIcon, PhoneIcon, TelegramIcon, TwitterIcon, WhatsAppIcon, YouTubeIcon } from "@/assets/svgr";
+import { EmailIcon, FacebookIcon, GithubIcon, InstagramIcon, LinkedInIcon, LocationIcon, MediumIcon, PhoneIcon, YouTubeIcon } from "@/assets/svgr";
 import Link from "next/link";
 import img from "@/img/me/krak-2.webp"
 import Image from "next/image";
