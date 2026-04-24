@@ -94,18 +94,18 @@ export default function ContactDetails(){
                                className="text-lg font-bold text-brand-600 leading-none"
                         >kontakt@adamczyk.top</span>
                     </Link>
-                <p
-                    className="w-full inline-flex items-center gap-2" 
-                >
-                    <LocationIcon
-                        className="size-7 fill-brand-400"
-                    />
-                    <span
-                        className="text-lg font-bold text-brand-600 leading-relaxed"
+                    <address
+                        className="w-full inline-flex items-center gap-2 not-italic" 
                     >
-                        Donatowo 53,<br/> 64-020 Czempiń
-                    </span>
-                </p>
+                        <LocationIcon
+                            className="size-7 fill-brand-400"
+                        />
+                        <span
+                            className="text-lg font-bold text-brand-600 leading-relaxed"
+                        >
+                            Donatowo 53,<br/> 64-020 Czempiń
+                        </span>
+                    </address>
                 </section>
                 <Socials/>
             </div>

@@ -1,5 +1,19 @@
 import me_lumo from "@/img/me/r-adamczyk-lumo.webp"
 import me_krk from "@/img/me/krak-2.webp"
+import type { T_About, T_Blog, T_CaseStudies, T_Hero, T_Overview, T_Services, T_Testimonials } from "@/ts/home-page.types"
+
+
+type t_home_page = {
+    hero: T_Hero;
+    overview:T_Overview;
+    about:T_About;
+    services:T_Services;
+    caseStudies:T_CaseStudies;
+    blog:T_Blog;
+    testimonials:T_Testimonials;
+}
+
+
 
 export const homePageStatic =  {
     hero : {

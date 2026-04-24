@@ -1,59 +1,21 @@
-import type { LinkProps } from "next/link";
+import type { T_ButtonBase } from "@/ts/buttons.types";
 
-// MENU 
-export type T_MenuItem_Base = {
-    label:string;
-    lang?:string;
-    href:string;
-    props?:Omit<LinkProps , 'href'>
+export type T_Brand = T_ButtonBase;
+
+export type T_MenuItemBase = T_ButtonBase;
+
+export type T_MenuItem = T_MenuItemBase & {
+    level:"main"|"dropdown";
 }
 
-export type T_MenuItem = {
-    isDropdown?:boolean;
-} & T_MenuItem_Base;
-
-export type T_MenuItem_Dropdown = {
-    item:T_MenuItem_Base;
-    submenu:Array<T_MenuItem_Base>;
+export type T_MenuDropdown = T_MenuItemBase & {
+    dropdown:Array<T_MenuItemBase>;
 }
-
-
-
-export type T_Menu_Static = Array<{
-    label:string;
-    href:string;
-    submenu?:Array<{
-        label:string;
-        href:string;    
-    }>
-}>
 
 export type T_Menu = {
-    menu:T_Menu_Static;
-} 
-//  SEARCH
-
-
-// LANGUAGE 
-
-
-
-//  NAVIGATION 
-
-type NavigationStates = {
-    isOpenMenu?:boolean;
-    isScrolled?:boolean;
+    menu: Array<Optional<T_MenuDropdown,'dropdown'>>;
 }
 
 export type T_Navigation = {
-    isOpen:boolean;
-    isScrolled:boolean;
-    closeMenu:() => void;
-}
-
-// BRAND
-
-export type T_Brand = {
-    label:string;
-    link?:Omit<LinkProps,'href'>;
-} 
+    brand:T_Brand;
+} & T_Menu;

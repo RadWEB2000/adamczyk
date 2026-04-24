@@ -10,12 +10,6 @@ export type T_MarqueeWrapper = {
     styles?:string;
 }
 
-
-
-
-
-
-
 // ui
 
 export type T_BreadcrumbItem = Omit<T_ButtonBase,'lang'>;

@@ -17,4 +17,8 @@ declare global {
         title:string;
     }
     type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
+
+    type Url = `http://${string}` | `https://${string}`;
+
+    type T_SocialTypes = "facebook"|"instagram"|"github"|"linkedin"|"medium"|"youtube";
 }
