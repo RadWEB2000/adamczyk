@@ -12,7 +12,7 @@ export type T_Hero = {
     breadcrumbs:T_Breadcrumbs;
     title:string;
     excerpt:string;
-    readingTime:number;
+    readingTime:string;
     release:string;
     image:T_ImageBase;
 }

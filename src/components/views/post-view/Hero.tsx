@@ -1,9 +1,12 @@
 import Image from "next/image";
-import img from "@/img/others/farm.jpg"
 import { Breadcrumbs } from "@/utils/ui";
 import { CalendarIcon, ClockIcon } from "@/assets/svgr";
+import type { T_Hero } from "@/ts/post-page.types";
+import moment from 'moment';
 
-export default function Hero(){
+
+
+export default function Hero({breadcrumbs,excerpt,image,readingTime,release,title}:T_Hero){
     return (
         <header
             className="bg-brand-950 min-h-[64vh] bg-[linear-gradient(to_right,color-mix(in_srgb,var(--color-brand-200),transparent_86%)_1px,transparent_1px)] bg-size-[105px_150px]  text-neutral-200 mb-17"
@@ -12,21 +15,13 @@ export default function Hero(){
                 className="page-section-width mx-auto flex flex-col pt-32"
             >
             <Breadcrumbs
-                items={[
-                    {
-                        href:'/blog',
-                        label:'Blog'
-                    },
-                    {
-                        href:'/blog/marketplace-vs-wlasny-sklep–czy-w-2026-roku-oplaca-sie-jeszcze-walczyc-o-ruch-seo',
-                        label:'Marketplace vs własny sklep – czy w 2026 roku opłaca się jeszcze walczyć o ruch SEO?'
-                    }
-                ]}
+                items={breadcrumbs.items}
             />
-            <h1 className="mt-8 mb-3 font-black font-heading leading-none text-accent-500 uppercase text-3xl sm:text-4xl-plus md:text-6xl lg:text-7xl-plus xl4:text-9xl-plus 2xl5:text-10xl-plus">Marketplace vs własny sklep – czy w 2026 roku opłaca się jeszcze walczyć o ruch SEO?</h1>
+            <h1 className="mt-8 mb-3 text-balance font-black font-heading leading-none text-accent-500 uppercase text-3xl sm:text-4xl-plus md:text-6xl lg:text-7xl-plus xl4:text-9xl-plus 2xl5:text-10xl-plus">{title}</h1>
             <strong
                 className="text-sm sm:text-base leading-relaxed max-w-[85ch] text-balance"
-            >Prowizje na Allegro rosną, Amazon walczy o polskich sprzedawców, a Google coraz częściej odpowiada na pytania klientów, zanim ci klikną w jakikolwiek link. Czy w takim otoczeniu budowanie własnego sklepu i inwestycja w SEO wciąż mają sens? Dane z ostatnich miesięcy dają dość jednoznaczną odpowiedź – tak, choć pod pewnymi warunkami.</strong>
+                dangerouslySetInnerHTML={{__html:excerpt}}
+           />
             <span
                 className="h-0.5 w-full block bg-brand-300 my-5"
             />
@@ -42,7 +37,7 @@ export default function Hero(){
                     <span
                         className="font-ui text-xs uppercase leading-none my-auto text-brand-200 sm:text-sm"
                     >
-                        21 min
+                        {readingTime}
                     </span>
                 </p>
                 <p
@@ -51,21 +46,23 @@ export default function Hero(){
                     <CalendarIcon
                         className="size-4 fill-brand-200 sm:size-5"
                     />
-                    <span
+                    <time
                         className="font-ui text-xs uppercase leading-none my-auto text-brand-200 sm:text-sm"
+                        dateTime={release}
                     >
-                        21 października 2025
-                    </span>
+                        {moment(release).locale('pl-PL').format('DD MMMM YYYY')}
+                    </time>
                 </p>
             </div>
             <Image
-                alt=""
+                alt={image.alt}
                 className="aspect-16/7 object-cover w-full top-12 -mb-12 mt-7"
-                height={img.height || 768}
+                height={image.height || 768}
                 loading="eager"
                 priority
-                src={img.src}
-                width={img.width || 1920}
+                title={image.title}
+                src={image.src}
+                width={image.width || 1920}
                 quality={75}
             />
             </section>

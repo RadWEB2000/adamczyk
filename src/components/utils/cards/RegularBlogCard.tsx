@@ -2,26 +2,30 @@ import Link from "next/link";
 import img from "@/img/others/winter-holidays.jpg"
 import Image from "next/image";
 import { CalendarIcon as Calendar, UserIcon as User } from "@/assets/svgr";
+import type { T_BlogCard } from "@/ts/card.types";
+import moment from "moment";
 
-export default function RegularBlogCard(){
+export default function RegularBlogCard({author,excerpt,href,image,release,title}:T_BlogCard){
     return (
-        <Link className="size-full gap-2 group bg-white/0 flex flex-col p-3" href="/blog/post">
+        <Link className="size-full gap-2 group bg-white/0 flex flex-col p-3" href={href}>
             <span className="col-span-full h-[1.15px] w-full flex items-center bg-neutral-400 relative after:content-[''] after:absolute    after:left-0  after:block  after:w-full  after:h-1.25  after:scale-x-0  after:origin-left group-hocus:after:scale-x-100  after:duration-400  after:ease-in-out  after:transition-transform   after:bg-accent-500"/>
             <Image
-                alt="Zdjęcie przedstawiające zimowe krajobrazy"
+                alt={image.alt}
                 className="w-full aspect-video object-cover"
-                height={img.height || 569}
+                height={image.height || 569}
                 loading="lazy"
-                src={img}
-                width={img.width || 768}
+                src={image.src}
+                title={image.title}
+                width={image.width || 768}
             />
             <section>
                 <h3
                     className="font-heading text-lg lg:text-2xl leading-tight text-balance font-bold uppercase group-hocus:text-accent-500"
-                >How to choose the right manufacturing partner for your business</h3>
+                >{title}</h3>
                 <p
                  className="line-clamp-3 text-neutral-500 text-sm mt-1"
-                >Prowizje na Allegro rosną, Amazon walczy o polskich sprzedawców, a Google coraz częściej odpowiada na pytania klientów, zanim ci klikną w jakikolwiek link. Czy w takim otoczeniu budowanie własnego sklepu i inwestycja w SEO wciąż mają sens? Dane z ostatnich miesięcy dają dość jednoznaczną odpowiedź – tak, choć pod pewnymi warunkami.</p>
+                 dangerouslySetInnerHTML={{__html:excerpt}}
+                />
             </section>
             <div
                 className="flex flex-row flex-wrap items-end justify-between gap-2 "
@@ -32,7 +36,7 @@ export default function RegularBlogCard(){
                     <Calendar
                         className="size-3"
                     />
-                    <time className="text-xs font-semibold uppercase xl2:text-sm" dateTime="2023-10-10">10 paź 2023</time>
+                    <time className="text-xs font-semibold uppercase xl2:text-sm" dateTime={release}>{moment(release).locale('pl-PL').format('DD MMM YYYY')}</time>
                 </p>
                 <p
                     className="inline-flex items-center gap-2"
@@ -40,7 +44,7 @@ export default function RegularBlogCard(){
                     <User
                         className="size-3 "
                     />
-                    <span className="text-xs font-semibold uppercase xl2:text-sm">Radosław Adamczyk</span>
+                    <span className="text-xs font-semibold uppercase xl2:text-sm">{author}</span>
                 </p>
             </div>
         </Link>

@@ -10,9 +10,22 @@ const nextConfig: NextConfig = {
       },
       {
         hostname:'portalsremski.pl'
+      },
+      {
+        hostname:'cms.adamczyk.top'
       }
     ]
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/logowanie',
+        destination: 'https://cms.adamczyk.top/logowanie',
+        basePath: false,
+        permanent: true,
+      },
+    ]
+  },
 };
 
 export default nextConfig;

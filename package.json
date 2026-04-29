@@ -12,6 +12,7 @@
   "dependencies": {
     "@toolwind/anchors": "^1.0.10",
     "@toolwind/corner-shape": "^0.0.8-3",
+    "graphql-request": "^7.4.0",
     "gsap": "^3.14.2",
     "lenis": "^1.3.18",
     "moment": "^2.30.1",

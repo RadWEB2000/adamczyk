@@ -1,8 +1,14 @@
 import { RegularHero } from "@/components/utils/ui";
+import { getPosts } from "@/queries/getPosts";
 import { RegularBlogCard as Card } from "@/utils/cards";
 import { ControlPanel } from "@/views/blog-view";
 
-export default function BlogPage(){
+export default async function BlogPage(){
+
+    const data = await  getPosts();
+
+    console.log('data posts:',data)
+
     return (
         <div className="min-h-125 pb-25">
             <RegularHero
@@ -29,18 +35,21 @@ export default function BlogPage(){
                 <div
                 className="grid grid-cols-1 md1:grid-cols-2 gap-1 bg-neutral-200/0"
                 >
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
+                    {
+                        data && data.map(({author,date,excerpt,image,title,uri}) => {
+                            return (
+                                <Card
+                                    author={author}
+                                    excerpt={excerpt}
+                                    href={uri}
+                                    image={image}
+                                    release={date}
+                                    title={title}
+                                    key={`blog-card-${title}-${uri}`}
+                                />
+                            )
+                        })
+                    }
                 </div>
             </main>
         </div>
