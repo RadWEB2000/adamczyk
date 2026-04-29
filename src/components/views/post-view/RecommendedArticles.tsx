@@ -9,12 +9,12 @@ export default function RecommendedArticles(){
                     className="text-4xl uppercase font-heading font-extrabold my-6"
                 >Rekomendowane wpisy blogowe</h2>
                 <div className="grid grid-cols-1 sm4:grid-cols-2 xl2:grid-cols-3">
+                    {/* <Card/>
                     <Card/>
                     <Card/>
                     <Card/>
                     <Card/>
-                    <Card/>
-                    <Card/>
+                    <Card/> */}
                 </div>
             </aside> 
     )
