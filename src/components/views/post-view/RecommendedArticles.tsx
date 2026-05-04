@@ -1,5 +1,6 @@
 
 import { RegularBlogCard as Card} from "@/utils/cards";
+import { gql } from "graphql-request";
 
 export default function RecommendedArticles(){
     return(
@@ -19,3 +20,9 @@ export default function RecommendedArticles(){
             </aside> 
     )
 }
+
+
+const  q = gql`
+
+    query getSEO { post(id: "zmienne-css-w-nowoczesnym-web-designie", idType: URI) { seo { breadcrumbTitle canonicalUrl description title jsonLd { raw } robots openGraph { alternateLocales articleMeta { author modifiedTime publishedTime } description image { height secureUrl type url width } locale siteName title updatedTime type slackEnhancedData { data label } } } } pageBy(uri: "/") { seo { breadcrumbTitle canonicalUrl description title jsonLd { raw } robots openGraph { alternateLocales articleMeta { author modifiedTime publishedTime } description image { height secureUrl type url width } locale siteName title updatedTime type slackEnhancedData { data label } } } } }
+`

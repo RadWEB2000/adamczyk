@@ -219,7 +219,9 @@ export default function Menu(){
                 {
                     menu.map(({title,items}) => {
                         return (
-                            <div>
+                            <div
+                                key={`footer-menu-column-${title}`}
+                            >
                                 <h4
                                     className="text-xl font-heading uppercase font-extrabold"
                                 >{title}</h4>

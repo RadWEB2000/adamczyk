@@ -18,7 +18,7 @@ export default function HomePage(){
           <Services/>
           <Statistics/>
         </div>
-        <CaseStudies/>
+        {/* <CaseStudies/> */}
         <div>
           <Blog/>
           <Testimonials/>
