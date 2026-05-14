@@ -45,12 +45,12 @@ export default function Hero({buttons,content,image,subtitle,title}:T_Hero){
                 <Image
                     className="h-screen absolute bottom-0 right-0 object-cover rotate-y-180 grayscale object-[115%] mask-r-from-0% mask-r-to-80%  better-img md:object-[70%]  lg:mask-r-from-45%  lg:mask-r-to-90%  xl5:mask-r-from-55%  xl5:mask-r-to-100%"
                     {...image}
+                    fetchPriority="high"
                     height={image.height}
                     loading="eager"
-                    sizes={image.sizes}
-                    
                     priority
                     quality={65}
+                    sizes={image.sizes}
                     width={image.width}
                 />
             </div>

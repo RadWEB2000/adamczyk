@@ -1,8 +1,6 @@
-import { homePageStatic } from "@/static/home-page"
+import type { T_Overview } from "@/ts/home-page.types"
 
-export default function Overview(){
-
-    const content = homePageStatic.overview
+export default function Overview({content}:T_Overview){
 
     return (
         <section

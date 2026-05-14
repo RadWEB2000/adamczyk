@@ -42,10 +42,16 @@ export default async function HomePage(){
       <main
         className="space-y-8  2xl5:*:my-20"
       >
-        <Overview/>
-        <About/>
+        <Overview
+          content={overview}
+        />
+        <About
+          {...about}
+        />
         <div>
-          <Services/>
+          <Services
+            {...services}
+          />
           <Statistics/>
         </div>
         <CaseStudies/>

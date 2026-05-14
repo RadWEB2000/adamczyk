@@ -18,17 +18,17 @@ export type T_HomeCaseStudyCard = T_CardBase & {
 }
 
 export type T_HomeServiceCardTile = {
-    button:T_ButtonBase;
-    content:string;
     title:string;
+    uri:string;
+    excerpt:string;
 }
 
 export type T_HomeServiceCard = {
-    cards:Array<T_HomeServiceCardTile>;
-    button:T_ButtonBase;
-    content:string;
     title:string;
     subtitle:string;
+    content:string;
+    button:T_ButtonBase;
+    cards:Array<T_HomeServiceCardTile> | null;
 }
 
 export type T_HomeTestimonialCard = {

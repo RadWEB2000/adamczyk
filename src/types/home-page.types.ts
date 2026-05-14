@@ -22,15 +22,20 @@ export type T_Overview = {
 }
 
 export type T_About = {
-    button:T_ButtonBase;
-    content:string;
-    image:T_ImageBase;
-    subtitle:string;
-    tags:Array<{
-        emoji:string;
-        title:string;
-    }>;
     title:string;
+    subtitle:string;
+    content:string;
+    button:T_ButtonBase;
+    badges:Array<string>;
+    image:{
+        alt:string;
+        src:string;
+        srcSet:string;
+        title:string;
+        sizes:string;
+        height:number;
+        width:number;
+    }
 }
 
 export type T_Blog = {
@@ -59,11 +64,12 @@ export type T_ServicesList = {
     cards:Array<T_HomeServiceCard>;
 }
 
-export type T_Services = T_ServicesList & {
+export type T_Services = {
     title:string;
     subtitle:string;
     content:string;
     button:T_ButtonBase;
+    cards:Array<T_HomeServiceCard>
 }
 
 export type T_Testimonials = {

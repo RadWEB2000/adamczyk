@@ -1,21 +1,22 @@
 import { PrimaryLinkButton as Button} from "@/utils/buttons";
-import { homePageStatic } from "@/static/home-page"
 import Image from "next/image";
+import type { T_About } from "@/ts/home-page.types";
 
 
-export default function About(){
+export default function About({badges,button,content,image,subtitle,title}:T_About){
 
-    const {content,image,list,subtitle,title,button} = homePageStatic.about;
+    // const {content,image,list,subtitle,title,button} = homePageStatic.about;
 
     return (
         <div className="page-section-width mx-auto my-30 lg:grid grid-cols-[4fr_6fr] gap-4 space-y-4 2xl:items-center lg:space-y-0">
             <Image
                 {...image}
                 className="better-img max-lg:aspect-3.5/4 object-cover object-top lg:size-full"
-                height={image.height || 1026}
+                height={image.height}
                 loading="lazy"
                 quality={65}
-                width={image.width || 768}
+                sizes={image.sizes}
+                width={image.width}
             />
             <section
                 className="page-section"
@@ -33,17 +34,16 @@ export default function About(){
                     dangerouslySetInnerHTML={{__html:content}}
                 />
                 {
-                    list &&
+                    badges &&
                     <ul className="flex flex-row flex-wrap space-x-4 space-y-1.5 xl5:mt-4">
                         {
-                            list.map(({emoji,title}) => {
+                            badges.map((badge:string) => {
                                 return (
                                     <li
                                         className="inline-flex gap-1 text-sm font-bold font-ui uppercase sm3:text-lg xl5:text-xl"
-                                        key={`list-${emoji}-${title}`}
+                                        key={`list-${badge}`}
                                     >
-                                        <i className="not-italic" >{emoji}</i>
-                                        <p>{title}</p>
+                                        {badge}
                                     </li>
                                 )
                             })
