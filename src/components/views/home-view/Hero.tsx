@@ -1,14 +1,14 @@
 import { PrimaryLinkButton as Button } from "@/utils/buttons";
-import { homePageStatic } from "@/data/static/home-page"
 import Image from "next/image";
+import type { T_Hero } from "@/ts/home-page.types";
 
-export default function Hero(){
-    const {content,image,subtitle,title,buttons} = homePageStatic.hero;
+export default function Hero({buttons,content,image,subtitle,title}:T_Hero){
+    // const {content,image,subtitle,title,buttons} = homePageStatic.hero;
 
     return(
          <header className="bg-brand-950 min-h-[97vh] bg-[linear-gradient(to_right,color-mix(in_srgb,var(--color-brand-200),transparent_86%)_1px,transparent_1px)] bg-size-[105px_150px]  text-neutral-200 grid grid-cols-1 *:row-start-1 z-0 relative landscape:sm4:max-md2:grid-cols-5 md:grid-cols-12 2xl5:min-h-[92vh]">
             <section
-                className="col-start-1  bg-orange-500/0 z-1 flex flex-col items-start justify-end pb-10 px-9 space-y-5 landscape:sm4:max-md2:col-end-5 landscape:sm4:max-md2:space-y-2 md:col-end-10 md:pr-0 md:pl-13 md:pb-15  2xl:pl-52.5  2xl:pb-[10vh]  2xl:space-y-8"
+                className="col-start-1  bg-orange-500/0 z-1 flex flex-col items-start justify-end pb-10 px-9 space-y-5 landscape:sm4:max-md2:col-end-5 landscape:sm4:max-md2:space-y-2 md:col-end-10 md:pr-0 md:pl-13 md:pb-15  2xl:pl-32.5  2xl:pb-[10vh]  2xl:space-y-8"
             >
                 <hgroup
                     className="headings space-y-2 *:font-heading"
@@ -45,11 +45,13 @@ export default function Hero(){
                 <Image
                     className="h-screen absolute bottom-0 right-0 object-cover rotate-y-180 grayscale object-[115%] mask-r-from-0% mask-r-to-80%  better-img md:object-[70%]  lg:mask-r-from-45%  lg:mask-r-to-90%  xl5:mask-r-from-55%  xl5:mask-r-to-100%"
                     {...image}
-                    height={image.height || 1026}
+                    height={image.height}
                     loading="eager"
+                    sizes={image.sizes}
+                    
                     priority
                     quality={65}
-                    width={image.width || 768}
+                    width={image.width}
                 />
             </div>
          </header>

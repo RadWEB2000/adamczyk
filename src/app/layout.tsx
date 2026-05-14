@@ -7,6 +7,7 @@ import { Footer } from "@/layout/footer";
 import { generateSEO } from "@/lib/functions/generateSEO";
 import Script from "next/script";
 import { getExtractJsonLd } from "@/funcs/getExtractJsonLd";
+import LenisProvider from "@/provider/LenisProvider";
 
 
 // export const metadata: Metadata = {
@@ -40,11 +41,13 @@ export default function RootLayout({
       <body
         className={`${clashDisplay.variable} ${clashGrotesk.variable} ${jakarta.variable} ${satoshi.variable} ${geist.variable} antialiased `}
       >
-        <NavigationProvider>
-          <Navigation/>
-          {children}
-          <Footer/>
-        </NavigationProvider>
+        <LenisProvider>
+          <NavigationProvider>
+            <Navigation/>
+            {children}
+            <Footer/>
+          </NavigationProvider>
+        </LenisProvider>
       </body>
     </html>
   );

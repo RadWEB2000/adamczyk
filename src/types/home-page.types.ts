@@ -2,11 +2,19 @@ import type { T_ButtonBase } from "@/ts/buttons.types";
 import type { T_BlogCard, T_HomeCaseStudyCard, T_HomeServiceCard, T_HomeTestimonialCard } from "@/ts/card.types";
 
 export type T_Hero = {
-    buttons:Array<T_ButtonBase>;
-    content:string;
-    image:T_ImageBase;
-    subtitle:string;
     title:string;
+    subtitle:string;
+    content:string;
+    buttons:Array<T_ButtonBase>;
+    image: {
+        alt:string;
+        src:string;
+        srcSet:string;
+        title:string;
+        sizes:string;
+        height:number;
+        width:number;
+    }
 }
 
 export type T_Overview = {
