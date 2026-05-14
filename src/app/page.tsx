@@ -56,7 +56,9 @@ export default async function HomePage(){
         </div>
         <CaseStudies/>
         <div>
-          <Blog/>
+          <Blog
+            {...blog}
+          />
           <Testimonials/>
         </div>
         <div className="page-section-width mx-auto">

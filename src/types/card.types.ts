@@ -17,6 +17,23 @@ export type T_HomeCaseStudyCard = T_CardBase & {
     services:Array<string>;
 }
 
+export type T_HomeBlogCard = {
+    author:string;
+    title:string;
+    date:string;
+    excerpt:string;
+    uri:string;
+    image:{
+        alt:string;
+        src:string;
+        srcSet:string;
+        title:string;
+        sizes:string;
+        height:number;
+        width:number;
+    }
+}
+
 export type T_HomeServiceCardTile = {
     title:string;
     uri:string;

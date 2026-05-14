@@ -1,5 +1,5 @@
 import type { T_ButtonBase } from "@/ts/buttons.types";
-import type { T_BlogCard, T_HomeCaseStudyCard, T_HomeServiceCard, T_HomeTestimonialCard } from "@/ts/card.types";
+import type { T_BlogCard, T_HomeBlogCard, T_HomeCaseStudyCard, T_HomeServiceCard, T_HomeTestimonialCard } from "@/ts/card.types";
 
 export type T_Hero = {
     title:string;
@@ -43,7 +43,7 @@ export type T_Blog = {
     subtitle:string;
     content:string;
     button:T_ButtonBase;
-    cards:Array<T_BlogCard>;
+    cards:Array<T_HomeBlogCard>
 }
 
 export type T_CaseStudiesSection = {
