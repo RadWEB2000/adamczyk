@@ -57,13 +57,14 @@ export type T_ContactForm = {
 }
 
 export type T_FaqItem = {
-    title:string;
-    content:string;
+    question:string;
+    id:string;
+    answer:string;
 }
 
 export type T_Faq = {
     title:string;
-    items:Array<T_FaqItem>;
+    questions:Array<T_FaqItem>;
 }
 
 export type T_Term = {

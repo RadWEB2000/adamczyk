@@ -4,8 +4,8 @@ export default function PartnershipBenefitCard({content,isOpen,onToggle,title}:T
     return (
         <li className="group">
             <button
-                onClick={onToggle}
                 className="w-full bg-brand-900 group-hover:bg-brand-200 px-4 py-3 text-left duration-100 ease-in-out transition-colors"
+                onClick={onToggle}
                 type="button"
             >
                 <h4 className="uppercase font-bold text-sm xl4:text-lg-plus text-brand-100 group-hover:text-brand-900 duration-100 ease-in-out transition-colors">
@@ -19,7 +19,10 @@ export default function PartnershipBenefitCard({content,isOpen,onToggle,title}:T
                 `}
             >
                 <div className="overflow-hidden">
-                <strong className="p-4 block font-normal text-xs xl4:text-base">{content}</strong>
+                    <p 
+                        className="p-4 block font-normal text-xs xl4:text-base"
+                        dangerouslySetInnerHTML={{__html:content}}
+                    />
                 </div>
             </div>
         </li>

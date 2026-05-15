@@ -30,7 +30,8 @@ export async function generateMetadata():Promise<Metadata>{
 
 export default async function HomePage(){
 
-  const {page:{about,blog,caseStudies,faq,hero,overview,services,testimonials}} = await getHomePage();
+  const {page:{about,blog,faq,hero,overview,services,testimonials}} = await getHomePage();
+  // const {page:{about,blog,caseStudies,faq,hero,overview,services,testimonials}} = await getHomePage();
 
   return (
     <div
@@ -59,10 +60,14 @@ export default async function HomePage(){
           <Blog
             {...blog}
           />
-          <Testimonials/>
+          <Testimonials
+            cards={testimonials}
+          />
         </div>
         <div className="page-section-width mx-auto">
-          <Faq/>
+          <Faq
+            {...faq}
+          />
         </div>
       </main>    
     </div>

@@ -7,6 +7,13 @@ export type T_LinkButtonBase = {
     
 } & LinkProps;
 
+export type T_TestimonialButtons = {
+    length:number;
+    items:Array<{
+        id:string;
+    }>
+}
+
 export type T_PrimaryLinkButton = T_LinkButtonBase & {
     theme: 'dark' | 'light'
 }

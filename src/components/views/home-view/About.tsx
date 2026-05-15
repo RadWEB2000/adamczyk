@@ -12,11 +12,8 @@ export default function About({badges,button,content,image,subtitle,title}:T_Abo
             <Image
                 {...image}
                 className="better-img max-lg:aspect-3.5/4 object-cover object-top lg:size-full"
-                height={image.height}
                 loading="lazy"
                 quality={65}
-                sizes={image.sizes}
-                width={image.width}
             />
             <section
                 className="page-section"

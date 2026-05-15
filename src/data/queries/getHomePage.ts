@@ -560,7 +560,7 @@ type response = {
                 sizes:string;
                 height:number;
                 width:number;
-            } | null;
+            };
             fullname:string;
             company:string;
             opinion:string;
@@ -719,7 +719,7 @@ export async function getHomePage():Promise<response> {
                 return {
                     date,
                     fullname:title,
-                    image: image ?{
+                    image: {
                         alt:image.node.altText,
                         src:image.node.sourceUrl,
                         title:image.node.title,
@@ -727,7 +727,7 @@ export async function getHomePage():Promise<response> {
                         srcSet:image.node.srcSet,
                         height:image.node.mediaDetails.height,
                         width:image.node.mediaDetails.width
-                    } : null,
+                    },
                     company,
                     opinion
                 }

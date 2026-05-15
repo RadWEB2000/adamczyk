@@ -1,10 +1,8 @@
-import Image from "next/image";
-import img from "@/img/peoples/girl-looking-through-binoculars.png"
-import { SecondaryLinkButton as Button} from "@/utils/buttons";
-import { T_OfferServiceCard } from "@/ts/card.types";
 import Link from "next/link";
+import { SecondaryLinkButton as Button} from "@/utils/buttons";
+import type { T_OfferServiceCard } from "@/ts/card.types";
 
-export default function OfferServiceCard({button,content,image,subtitle,title,subservices}:T_OfferServiceCard){
+export default function OfferServiceCard({button,content,subtitle,title,subservices}:T_OfferServiceCard){
     return (
         <li
             className="first-of-type:lg5:grid grid-cols-2 bg-brand-300/0  gap-1  page-section first-of-type:col-span-full flex flex-col" 
@@ -41,13 +39,14 @@ export default function OfferServiceCard({button,content,image,subtitle,title,su
                     subservices &&
                     <ul className="grid grid-cols-1 md1:grid-cols-2 gap-1">
                         {
-                            subservices.slice(0,10).map(({href,label}) => {
+                            subservices.map(({id,title,uri}) => {
                                 return (
                                     <Link
                                         className="list-item place-content-center z-0 overflow-clip bg-brand-800 py-2 text-brand-50 text-center uppercase text-xs-plus px-1 relative before:content-[''] before:h-full before:w-[calc(100%+120px)] before:bg-accent-300 font-semibold before:block before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:skew-x-15 before:-z-1 before:scale-x-1 before:origin-left hocus:before:scale-x-100 before:duration-800 before:ease-in-out before:transition-transform hocus:text-brand-900 duration-100 transition-colors ease-in-out"
-                                        href={href}
+                                        href={uri}
+                                        key={id}
                                     >
-                                        {label}
+                                        {title}
                                     </Link>
                                 )
                             })

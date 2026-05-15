@@ -48,35 +48,59 @@ export type T_HomeServiceCard = {
     cards:Array<T_HomeServiceCardTile> | null;
 }
 
-export type T_HomeTestimonialCard = {
-    company:string;
-    content:string;
+export type T_TestimonialCard = {
+    date:string;
+    image:{
+        alt:string;
+        src:string;
+        srcSet:string;
+        title:string;
+        sizes:string;
+        height:number;
+        width:number;
+    } | null;
     fullname:string;
-    image:T_ImageBase;
-    release:string;
+    company:string;
+    opinion:string;
+}
+
+export type T_Testimonials = {
+    cards:Array<T_TestimonialCard>;
 }
 
 export type T_OfferServiceCard = {
-    button:T_ButtonBase;
-    content:string;
-    image:T_ImageBase;
     title:string;
-    subservices?:Array<Omit<T_ButtonBase,'lang'>>
+    content:string;
     subtitle:string;
+    button:T_ButtonBase;
+    subservices:Array<{
+        id:string;
+        title:string;
+        uri:string;
+    }> | null;
 }
 
 export type T_PartnershipBenefitCard = {
     content:string;
+    title:string;
     isOpen:boolean;
     onToggle: () => void;
-    title:string;
 }
 
 export type T_RegularCaseStudyCard = {
-    content:string;
-    image:T_ImageBase;
-    href:string;
+    id:string;
     title:string;
+    uri:string;
+    excerpt:string;
+    image: {
+        alt:string;
+        src:string;
+        srcSet:string;
+        title:string;
+        sizes:string;
+        height:number;
+        width:number;
+    }
 }
 
 export type T_RegularCityCard = {

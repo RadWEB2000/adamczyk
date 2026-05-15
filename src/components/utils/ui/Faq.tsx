@@ -1,6 +1,7 @@
+import type { T_Faq } from "@/types/ui.types";
 import {FaqItem as Item} from "@/utils/ui";
 
-export default function Faq(){
+export default function Faq({questions,title = 'Pytania i odpowiedzi'}:T_Faq){
     return (
         <div
             className=""
@@ -14,16 +15,25 @@ export default function Faq(){
                     <h2
                         className="page-section__subtitle"
                     >
-                        Pytania i odpowiedzi
+                        {title}
                     </h2>
                 </hgroup>
             </article>
-            <div className="flex flex-col gap-1.5 mt-4">
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
-            </div>
+            {
+                questions &&
+                <div className="flex flex-col gap-1.5 mt-4">
+                    {
+                        questions.map((question) => {
+                            return (
+                                <Item
+                                    {...question}
+                                    key={`faq-question-${question.id}`}
+                                />
+                            )
+                        })
+                    }
+                </div>
+            }
         </div>
     )
 }

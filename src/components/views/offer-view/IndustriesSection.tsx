@@ -1,3 +1,5 @@
+import { SecondaryLinkButton } from "@/components/utils/buttons"
+import type { T_IndustriesSection } from "@/ts/offer-page.types"
 
 const cards = [
     {
@@ -18,26 +20,28 @@ const cards = [
     },
 ]
 
-export default function IndustriesSection(){
+export default function IndustriesSection({cards,content,subtitle,title}:T_IndustriesSection){
     return (
         <div className="page-section-width my-5 mx-auto">
-            <section className="page-section xl:grid xl:grid-cols-2 items-center mb-5">
+            <section className="page-section xl:grid xl:grid-cols-2 mb-5">
                 <hgroup className="page-section__headings">
-                    <h2 className="page-section__title">Agencja SEO dla Twojego modelu biznesowego</h2>
-                    <h3 className="page-section__subtitle text-accent-500">Dla kogo pozycjonujemy strony?</h3>
+                    <h2 className="page-section__title">{title}</h2>
+                    <h3 className="page-section__subtitle text-accent-500">{subtitle}</h3>
                 </hgroup>
-                <p className="page-section__content">
-                    SEO to inwestycja w trwały, skalowalny wzrost ruchu, sprzedaży i rozpoznawalności bez ciągłego płacenia za kliknięcia. Pracujemy na danych, ale patrzymy szerzej – na model działania Twojej firmy, ścieżkę zakupową klienta i miejsce SEO w całym ekosystemie marketingowym.
-                </p>
+                <p 
+                    className="page-section__content"
+                    dangerouslySetInnerHTML={{__html:content}}
+                />
             </section>
             <ul
                 className="grid grid-cols-1 xl4:grid-cols-2 gap-3 xl4:px-4 xl4:gap-6"
             >
                 {
-                    cards.map(({content,title}) => {
+                    cards.map(({button,content,title}) => {
                         return (
                             <li
                                 className="bg-brand-200/15 p-4 xl4:p-8 h-fits"
+                                key={`target-${title}`}
                             >
                                 <h4
                                     className="text-lg-plus xl4:text-5xl font-bold uppercase text-brand-500"
@@ -49,6 +53,14 @@ export default function IndustriesSection(){
                                     className="text-neutral-500 text-balance text-xs leading-tight xl4:text-sm xl4:leading-loose"
                                     dangerouslySetInnerHTML={{__html:content}}
                                 />
+                                {
+                                    button &&
+                                    <SecondaryLinkButton
+                                        {...button}
+                                        lang="pl-PL"
+                                        theme="dark"
+                                    />
+                                }
                             </li>
                         )
                     })
