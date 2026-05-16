@@ -19,7 +19,7 @@ export default function CaseStudyPage(){
                     <Section/>
                 </article>
                 <div className="col-start-2 space-y-2">
-                    <Faq/>
+                    {/* <Faq/> */}
                     <Author/>
                 </div>
             </main>

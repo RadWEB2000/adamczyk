@@ -22,7 +22,7 @@ export default function AboutPage(){
             <main className=" my-5">
                 <About/>
                 <Experience/>
-                <Testimonials/>
+                {/* <Testimonials/> */}
                 <div className="page-section-width mx-auto">
                     <RecommendedArticles/>
                 </div>
