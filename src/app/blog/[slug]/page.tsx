@@ -40,7 +40,6 @@ export default async function PostPage({
     return (
         <div className="min-h-125 pb-25">
             <Hero
-              breadcrumbs={{items:breadcrumbs}}
               excerpt={excerpt}
               image={image}
               readingTime={readingTime}

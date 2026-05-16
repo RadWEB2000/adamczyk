@@ -55,12 +55,12 @@ export default async function ServicePage({params}:{params:Promise<{service:Arra
               {...hero}
           />
           <main
-            className="mt-5 xl:mt-20 space-y-10"
+            className="mt-5 xl:mt-10 space-y-10"
           >
             <div className="page-section-width mx-auto">
               <Image
                     {...featuredImage}
-                    className="aspect-15/5 object-cover object-center"
+                    className="aspect-15/5 object-cover object-center w-full"
                     loading="lazy"
                     quality={75}
               />
