@@ -31,8 +31,10 @@ export async function generateMetadata():Promise<Metadata>{
     },
   }
 } 
+
 export default async function OfferPage(){
     const {page:{benefits,caseStudies,collaborationProcess,content,faq,featuredImage,hero,services,targetGroups,testimonials}} = await getOfferPage();
+  
     return (
         <div className="min-h-152 pb-22">
             <Hero
