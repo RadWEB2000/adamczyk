@@ -58,7 +58,7 @@ export default async function PostPage({
                     dangerouslySetInnerHTML={{__html:content}}
                 />
                 <div className="col-start-2 space-y-4 bg-red-200/0">
-                    <Faq/>
+                    {/* <Faq/> */}
                     <Author/>
                 </div>
                 {/* <RecommendedArticles/> */}
