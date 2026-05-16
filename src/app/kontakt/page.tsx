@@ -1,22 +1,14 @@
-import { ContactDetails, FirstContact } from "@/views/contact-view";
-import {ContactForm as Form} from "@/utils/ui";
 import { RegularHero as Hero} from "@/utils/ui";
+import {ContactForm as Form} from "@/utils/ui";
+import { ContactDetails, FirstContact } from "@/views/contact-view";
 
 export default function ContactPage(){
     return (
         <div className="min-h-152 pb-22">
             <Hero
-                breadcrumbs={{
-                    items:[
-                        {
-                            href:'/kontakt',
-                            label:'Kontakt'
-                        }
-                    ]
-                }}
+                content=""
                 subtitle="Kontakt"
                 title="Kontakt ze specjalistą SEO"
-                content=""
             />
             <main className="page-section-width gap-5 mx-auto my-10 max-xl4:space-y-6 xl4:grid grid-cols-[1fr_550px]">
                 <div

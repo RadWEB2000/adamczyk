@@ -4,18 +4,6 @@ export default function CitiesPage(){
     return (
         <div>
             <Hero
-                breadcrumbs={{
-                    items:[
-                        {
-                            href:'/oferta',
-                            label:'Oferta'
-                        },
-                        {
-                            href:'/oferta/miasta',
-                            label:'Miasta'
-                        },
-                    ]
-                }}
                 subtitle="Miasta"
                 title="Miasta"
                 content="Pomagam firmom zdobywać widoczność w Google i systemach AI, budować topical authority oraz projektować szybkie strony internetowe zoptymalizowane pod SEO, odpowiedzi generatywne i konwersję. Łączę strategię contentową."

@@ -1,5 +1,6 @@
 import { Author } from "@/views/post-view";
-import { Faq, TableOfContents } from "@/utils/ui";
+// import { Faq, TableOfContents } from "@/utils/ui";
+import { TableOfContents } from "@/utils/ui";
 import { Hero, Section } from "@/views/case-study-view";
 
 export default function CaseStudyPage(){

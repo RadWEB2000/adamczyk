@@ -38,14 +38,6 @@ export default async function OfferPage(){
     return (
         <div className="min-h-152 pb-22">
             <Hero
-                breadcrumbs={{
-                    items:[
-                        {
-                            href:'/oferta',
-                            label:'Oferta'
-                        }
-                    ]
-                }}
                 {...hero}
             />
             <main className="space-y-4 my-5">

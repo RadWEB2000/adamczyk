@@ -1,12 +1,12 @@
-import { ServiceModules, WhyChoose } from "@/views/service-view";
+// import { ServiceModules, WhyChoose } from "@/views/service-view";
 import { RegularHero as Hero, Faq, TableOfContents} from "@/utils/ui";
-import { CaseStudies, CitiesSection, IndustriesSection, PartnershipBenefits, Steps } from "@/views/offer-view";
-import { Author, RecommendedArticles } from "@/views/post-view";
+// import { CaseStudies, CitiesSection, IndustriesSection, PartnershipBenefits, Steps } from "@/views/offer-view";
+import { CaseStudies, IndustriesSection, PartnershipBenefits, Steps } from "@/views/offer-view";
+// import { Author, RecommendedArticles } from "@/views/post-view";
 import { Testimonials } from "@/views/home-view";
 import Image from "next/image";
 import { getServicePage } from "@/data/queries/getServicePage";
-import { Metadata } from "next";
-import { generateBreadcrumbs } from "@/lib/functions/generateBreadcrumbs";
+import type { Metadata } from "next";
 
 export async function generateMetadata({params}:{params:Promise<{service:Array<string>}>}):Promise<Metadata>{
   const slug:Array<string> = (await params).service;
@@ -45,7 +45,8 @@ export default async function ServicePage({params}:{params:Promise<{service:Arra
 
     const uri = `/oferta/${slug.join('/')}`;
 
-    const {page:{benefits,blog,caseStudies,cities,collaborationProcess,content,faq,featuredImage,hero,targetGroups,testimonials}} = await getServicePage(uri);
+    // const {page:{benefits,blog,caseStudies,cities,collaborationProcess,content,faq,featuredImage,hero,targetGroups,testimonials}} = await getServicePage(uri);
+    const {page:{benefits,caseStudies,collaborationProcess,content,faq,featuredImage,hero,targetGroups,testimonials}} = await getServicePage(uri);
 
 
 

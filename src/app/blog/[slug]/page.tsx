@@ -1,6 +1,8 @@
-import { Faq, TableOfContents } from "@/components/utils/ui";
+// import { Faq, TableOfContents } from "@/components/utils/ui";
+import { TableOfContents } from "@/components/utils/ui";
 import { getPost } from "@/data/queries/getPost";
-import { Author, Hero, RecommendedArticles } from "@/views/post-view";
+import { Author, Hero } from "@/views/post-view";
+// import { Author, Hero, RecommendedArticles } from "@/views/post-view";
 import type { Metadata } from "next";
 
 
@@ -35,7 +37,8 @@ export default async function PostPage({
 }){
 
   const slug = (await params).slug;
-  const {page:{author,content,date,excerpt,image,readingTime,title, breadcrumbs}} = await getPost({slug:slug});
+  // const {page:{author,content,date,excerpt,image,readingTime,title, breadcrumbs}} = await getPost({slug:slug});
+  const {page:{content,date,excerpt,image,readingTime,title}} = await getPost({slug:slug});
 
     return (
         <div className="min-h-125 pb-25">
