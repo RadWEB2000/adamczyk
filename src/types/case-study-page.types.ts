@@ -1,7 +1,5 @@
-import type { T_Breadcrumbs } from "@/ts/ui.types"
 
 export type T_Hero = {
-    breadcrumbs:T_Breadcrumbs;
     title:string;
     subtitle:string;
     excerpt:string;

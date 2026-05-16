@@ -6,7 +6,7 @@ import moment from 'moment';
 
 
 
-export default function Hero({breadcrumbs,excerpt,image,readingTime,release,title}:T_Hero){
+export default function Hero({excerpt,image,readingTime,release,title}:T_Hero){
     return (
         <header
             className="bg-brand-950 min-h-[64vh] bg-[linear-gradient(to_right,color-mix(in_srgb,var(--color-brand-200),transparent_86%)_1px,transparent_1px)] bg-size-[105px_150px]  text-neutral-200 mb-17"

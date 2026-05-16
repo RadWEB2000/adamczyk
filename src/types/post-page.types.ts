@@ -1,4 +1,3 @@
-import type { T_Breadcrumbs } from "@/ts/ui.types";
 import type { T_BlogCard } from "@/ts/card.types";
 
 export type T_Author = {
@@ -9,7 +8,6 @@ export type T_Author = {
 }
 
 export type T_Hero = {
-    breadcrumbs:T_Breadcrumbs;
     title:string;
     excerpt:string;
     readingTime:string;
