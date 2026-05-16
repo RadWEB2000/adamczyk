@@ -41,8 +41,6 @@ export default async function ServicePage({params}:{params:Promise<{service:Arra
 
     const slug:Array<string> = (await params).service;
 
-    const breadcrumbs =  await generateBreadcrumbs();
-
     
 
     const uri = `/oferta/${slug.join('/')}`;
@@ -54,8 +52,6 @@ export default async function ServicePage({params}:{params:Promise<{service:Arra
     return (
         <div className="min-h-152 pb-22">
           <Hero
-              breadcrumbs={{
-                  items: breadcrumbs,              }}
               {...hero}
           />
           <main

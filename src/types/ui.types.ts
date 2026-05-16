@@ -79,7 +79,6 @@ export type T_FilterTerms = {
 }
 
 export type T_RegularHero = {
-    breadcrumbs:T_Breadcrumbs;
     title:string;
     subtitle:string;
     content?:string;

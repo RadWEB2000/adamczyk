@@ -15,7 +15,6 @@ export default function Hero({breadcrumbs,excerpt,image,readingTime,release,titl
                 className="page-section-width mx-auto flex flex-col pt-32"
             >
             <Breadcrumbs
-                items={breadcrumbs.items}
             />
             <h1 className="mt-8 mb-3 text-balance font-black font-heading leading-none text-accent-500 uppercase text-3xl sm:text-4xl-plus md:text-6xl lg:text-7xl-plus xl4:text-9xl-plus 2xl5:text-10xl-plus">{title}</h1>
             <strong

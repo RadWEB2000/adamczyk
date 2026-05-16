@@ -1,5 +1,9 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { ChevronIcon as Chevron, HomeIcon as Home } from "@/assets/svgr";
-import { T_BreadcrumbItem, T_Breadcrumbs } from "@/ts/ui.types";
+import type { T_BreadcrumbItem } from "@/ts/ui.types";
 import Link from "next/link";
 
 
@@ -33,23 +37,47 @@ function Item({href,label}:T_BreadcrumbItem){
     )
 }
 
-export default function Breadcrumbs({home,items}:T_Breadcrumbs){
+export default function Breadcrumbs(){
+  const pathname = usePathname();
+  const [items, setItems] = useState<T_BreadcrumbItem[]>([]);
+
+  useEffect(() => {
+    if (!pathname) return;
+
+    fetch(`/api/breadcrumbs?pathname=${encodeURIComponent(pathname)}`)
+      .then((res) => {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+      })
+      .then((data) => setItems(data))
+      .catch((err) => {
+        console.error('Failed to load breadcrumbs', err);
+        // Fallback: generuj z pathname
+        const segments = pathname.split('/').filter(Boolean);
+        const fallback: T_BreadcrumbItem[] = [];
+        let current = '';
+        for (const seg of segments) {
+          current += '/' + seg;
+          fallback.push({ href: current, label: seg.replace(/-/g, ' ') });
+        }
+        setItems(fallback);
+      });
+  }, [pathname]);
     return (
         <menu
             className="flex items-center justify-start flex-wrap gap-2.5"
         >
             <Start
-                href={ home ? home.href : '/'}
-                label={home ? home.label : 'Start'}
+                href='/'
+                label='Start'
             />
             {
-                items &&
                 items.map(({href, label}) => {
                     return (
                         <Item
                             href={href}
-                            label={label}
                             key={`breadcrumbs-item-${href}-${label}`}
+                            label={label}
                         />
                     )
                 })
